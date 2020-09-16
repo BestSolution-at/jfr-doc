@@ -32,7 +32,7 @@
     	<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
         <nav class="uk-navbar-container" uk-navbar>
             <div class="uk-navbar-left">
-                <h2 style="padding-left: 40px; padding-top: 20px;">JFR-Events - OpenJDK-14</h2>
+                <h2 style="padding-left: 40px; padding-top: 20px;">JFR-Events - OpenJDK-15</h2>
 
             </div>
 
@@ -73,6 +73,7 @@
 		        <li><a href="#jdk.ClassLoad">jdk.ClassLoad</a></li>
 		        <li><a href="#jdk.ClassLoaderStatistics">jdk.ClassLoaderStatistics</a></li>
 		        <li><a href="#jdk.ClassLoadingStatistics">jdk.ClassLoadingStatistics</a></li>
+		        <li><a href="#jdk.ClassRedefinition">jdk.ClassRedefinition</a></li>
 		        <li><a href="#jdk.ClassUnload">jdk.ClassUnload</a></li>
 		        <li><a href="#jdk.CodeCacheConfiguration">jdk.CodeCacheConfiguration</a></li>
 		        <li><a href="#jdk.CodeCacheFull">jdk.CodeCacheFull</a></li>
@@ -88,6 +89,7 @@
 		        <li><a href="#jdk.ConcurrentModeFailure">jdk.ConcurrentModeFailure</a></li>
 		        <li><a href="#jdk.DataLoss">jdk.DataLoss</a></li>
 		        <li><a href="#jdk.Deoptimization">jdk.Deoptimization</a></li>
+		        <li><a href="#jdk.DirectBufferStatistics">jdk.DirectBufferStatistics</a></li>
 		        <li><a href="#jdk.DoubleFlag">jdk.DoubleFlag</a></li>
 		        <li><a href="#jdk.DoubleFlagChanged">jdk.DoubleFlagChanged</a></li>
 		        <li><a href="#jdk.DumpReason">jdk.DumpReason</a></li>
@@ -113,6 +115,7 @@
 		        <li><a href="#jdk.GCHeapConfiguration">jdk.GCHeapConfiguration</a></li>
 		        <li><a href="#jdk.GCHeapSummary">jdk.GCHeapSummary</a></li>
 		        <li><a href="#jdk.GCPhaseConcurrent">jdk.GCPhaseConcurrent</a></li>
+		        <li><a href="#jdk.GCPhaseConcurrentLevel1">jdk.GCPhaseConcurrentLevel1</a></li>
 		        <li><a href="#jdk.GCPhaseParallel">jdk.GCPhaseParallel</a></li>
 		        <li><a href="#jdk.GCPhasePause">jdk.GCPhasePause</a></li>
 		        <li><a href="#jdk.GCPhasePauseLevel1">jdk.GCPhasePauseLevel1</a></li>
@@ -123,6 +126,7 @@
 		        <li><a href="#jdk.GCSurvivorConfiguration">jdk.GCSurvivorConfiguration</a></li>
 		        <li><a href="#jdk.GCTLABConfiguration">jdk.GCTLABConfiguration</a></li>
 		        <li><a href="#jdk.GarbageCollection">jdk.GarbageCollection</a></li>
+		        <li><a href="#jdk.HeapDump">jdk.HeapDump</a></li>
 		        <li><a href="#jdk.InitialEnvironmentVariable">jdk.InitialEnvironmentVariable</a></li>
 		        <li><a href="#jdk.InitialSystemProperty">jdk.InitialSystemProperty</a></li>
 		        <li><a href="#jdk.IntFlag">jdk.IntFlag</a></li>
@@ -158,11 +162,14 @@
 		        <li><a href="#jdk.ParallelOldGarbageCollection">jdk.ParallelOldGarbageCollection</a></li>
 		        <li><a href="#jdk.PhysicalMemory">jdk.PhysicalMemory</a></li>
 		        <li><a href="#jdk.PlaceholderTableStatistics">jdk.PlaceholderTableStatistics</a></li>
+		        <li><a href="#jdk.ProcessStart">jdk.ProcessStart</a></li>
 		        <li><a href="#jdk.PromoteObjectInNewPLAB">jdk.PromoteObjectInNewPLAB</a></li>
 		        <li><a href="#jdk.PromoteObjectOutsidePLAB">jdk.PromoteObjectOutsidePLAB</a></li>
 		        <li><a href="#jdk.PromotionFailed">jdk.PromotionFailed</a></li>
 		        <li><a href="#jdk.ProtectionDomainCacheTableStatistics">jdk.ProtectionDomainCacheTableStatistics</a></li>
+		        <li><a href="#jdk.RedefineClasses">jdk.RedefineClasses</a></li>
 		        <li><a href="#jdk.ReservedStackActivation">jdk.ReservedStackActivation</a></li>
+		        <li><a href="#jdk.RetransformClasses">jdk.RetransformClasses</a></li>
 		        <li><a href="#jdk.SafepointBegin">jdk.SafepointBegin</a></li>
 		        <li><a href="#jdk.SafepointCleanup">jdk.SafepointCleanup</a></li>
 		        <li><a href="#jdk.SafepointCleanupTask">jdk.SafepointCleanupTask</a></li>
@@ -199,10 +206,15 @@
 		        <li><a href="#jdk.X509Validation">jdk.X509Validation</a></li>
 		        <li><a href="#jdk.YoungGarbageCollection">jdk.YoungGarbageCollection</a></li>
 		        <li><a href="#jdk.YoungGenerationConfiguration">jdk.YoungGenerationConfiguration</a></li>
+		        <li><a href="#jdk.ZAllocationStall">jdk.ZAllocationStall</a></li>
 		        <li><a href="#jdk.ZPageAllocation">jdk.ZPageAllocation</a></li>
+		        <li><a href="#jdk.ZRelocationSet">jdk.ZRelocationSet</a></li>
+		        <li><a href="#jdk.ZRelocationSetGroup">jdk.ZRelocationSetGroup</a></li>
 		        <li><a href="#jdk.ZStatisticsCounter">jdk.ZStatisticsCounter</a></li>
 		        <li><a href="#jdk.ZStatisticsSampler">jdk.ZStatisticsSampler</a></li>
 		        <li><a href="#jdk.ZThreadPhase">jdk.ZThreadPhase</a></li>
+		        <li><a href="#jdk.ZUncommit">jdk.ZUncommit</a></li>
+		        <li><a href="#jdk.ZUnmap">jdk.ZUnmap</a></li>
 		        <li class="uk-nav-header">Types</li>
 		        <li class="uk-nav-divider"></li>
 		        <li><a href="#boolean">boolean</a></li>
@@ -261,6 +273,7 @@
 		        <li><a href="#ThreadState">ThreadState</a></li>
 		        <li><a href="#VMOperationType">VMOperationType</a></li>
 		        <li><a href="#VirtualSpace">VirtualSpace</a></li>
+		        <li><a href="#ZPageTypeType">ZPageTypeType</a></li>
 		        <li><a href="#ZStatisticsCounterType">ZStatisticsCounterType</a></li>
 		        <li><a href="#ZStatisticsSamplerType">ZStatisticsSamplerType</a></li>
 		    </ul>
@@ -1167,22 +1180,22 @@
 			        		<td>Total size of all allocated metaspace blocks (each chunk has several blocks)</td>
 			        	</tr>
 			        	<tr>
-			        		<td>unsafeAnonymousClassCount</td>
+			        		<td>hiddenClassCount</td>
 			        		<td><a href="#long">long</a></td>
 			        		<td></td>
-			        		<td>Number of loaded classes to support invokedynamic</td>
+			        		<td>Number of hidden classes</td>
 			        	</tr>
 			        	<tr>
-			        		<td>unsafeAnonymousChunkSize</td>
+			        		<td>hiddenChunkSize</td>
 			        		<td><a href="#long">long</a></td>
 			        		<td>Unsigned</td>
-			        		<td>Total size of all allocated metaspace chunks for unsafe anonymous classes (each chunk has several blocks)</td>
+			        		<td>Total size of all allocated metaspace chunks for hidden classes (each chunk has several blocks)</td>
 			        	</tr>
 			        	<tr>
-			        		<td>unsafeAnonymousBlockSize</td>
+			        		<td>hiddenBlockSize</td>
 			        		<td><a href="#long">long</a></td>
 			        		<td>Unsigned</td>
-			        		<td>Total size of all allocated metaspace blocks for unsafe anonymous classes (each chunk has several blocks)</td>
+			        		<td>Total size of all allocated metaspace blocks for hidden classes (each chunk has several blocks)</td>
 			        	</tr>
 			        </tbody>
 			    </table>
@@ -1229,6 +1242,58 @@
 			        		<td><a href="#long">long</a></td>
 			        		<td></td>
 			        		<td>Number of classes unloaded since JVM start</td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.ClassRedefinition">jdk.ClassRedefinition <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> Class Redefinition<br>
+			        <b>Description:</b> <br>
+			        <b>Categories:</b> Java Virtual Machine, Class Loading
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>redefinedClass</td>
+			        		<td><a href="#Class">Class</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>classModificationCount</td>
+			        		<td><a href="#int">int</a></td>
+			        		<td></td>
+			        		<td>The number of times the class has changed</td>
+			        	</tr>
+			        	<tr>
+			        		<td>redefinitionId</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
 			        	</tr>
 			        </tbody>
 			    </table>
@@ -1592,6 +1657,12 @@
 			        		<td></td>
 			        		<td></td>
 			        	</tr>
+			        	<tr>
+			        		<td>sweepThreshold</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
 			        </tbody>
 			    </table>
 			</div>
@@ -1641,19 +1712,19 @@
 			        	<tr>
 			        		<td>totalSweepTime</td>
 			        		<td><a href="#long">long</a></td>
-			        		<td>Timespan</td>
+			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        	<tr>
 			        		<td>peakFractionTime</td>
 			        		<td><a href="#long">long</a></td>
-			        		<td>Timespan</td>
+			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        	<tr>
 			        		<td>peakSweepTime</td>
 			        		<td><a href="#long">long</a></td>
-			        		<td>Timespan</td>
+			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        </tbody>
@@ -2266,6 +2337,82 @@
 			        		<td>action</td>
 			        		<td><a href="#String">String</a></td>
 			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.DirectBufferStatistics">jdk.DirectBufferStatistics <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> Direct Buffer Statistics<br>
+			        <b>Description:</b> Statistics of direct buffer<br>
+			        <b>Categories:</b> Java Application, Statistics
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>stackTrace</td>
+			        		<td><a href="#StackTrace">StackTrace</a></td>
+			        		<td></td>
+			        		<td>Stack Trace starting from the method the event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>maxCapacity</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>DataAmount</td>
+			        		<td>Maximum direct buffer capacity the process can use</td>
+			        	</tr>
+			        	<tr>
+			        		<td>count</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>totalCapacity</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>DataAmount</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>memoryUsed</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>DataAmount</td>
 			        		<td></td>
 			        	</tr>
 			        </tbody>
@@ -3847,6 +3994,64 @@
 				<br>
 			</div>
 			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.GCPhaseConcurrentLevel1">jdk.GCPhaseConcurrentLevel1 <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> GC Phase Concurrent Level 1<br>
+			        <b>Description:</b> <br>
+			        <b>Categories:</b> Java Virtual Machine, GC, Phases
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>gcId</td>
+			        		<td><a href="#int">int</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>name</td>
+			        		<td><a href="#String">String</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
 			    <h1 id="jdk.GCPhaseParallel">jdk.GCPhaseParallel <span class="uk-label">Event</span></h1>
 			    <hr>
 			    <p class="uk-text-lead"></p>
@@ -4403,14 +4608,90 @@
 			        	<tr>
 			        		<td>sumOfPauses</td>
 			        		<td><a href="#long">long</a></td>
-			        		<td>Timespan</td>
+			        		<td>Unsigned</td>
 			        		<td>Sum of all the times in which Java execution was paused during the garbage collection</td>
 			        	</tr>
 			        	<tr>
 			        		<td>longestPause</td>
 			        		<td><a href="#long">long</a></td>
-			        		<td>Timespan</td>
+			        		<td>Unsigned</td>
 			        		<td>Longest individual pause during the garbage collection</td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.HeapDump">jdk.HeapDump <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> Heap Dump<br>
+			        <b>Description:</b> <br>
+			        <b>Categories:</b> Java Virtual Machine, Diagnostics
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>stackTrace</td>
+			        		<td><a href="#StackTrace">StackTrace</a></td>
+			        		<td></td>
+			        		<td>Stack Trace starting from the method the event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>destination</td>
+			        		<td><a href="#String">String</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>size</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>gcBeforeDump</td>
+			        		<td><a href="#boolean">boolean</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>onOutOfMemoryError</td>
+			        		<td><a href="#boolean">boolean</a></td>
+			        		<td></td>
+			        		<td></td>
 			        	</tr>
 			        </tbody>
 			    </table>
@@ -5343,7 +5624,7 @@
 			        		<td></td>
 			        	</tr>
 			        	<tr>
-			        		<td>unsafeAnonymousClassLoader</td>
+			        		<td>hiddenClassLoader</td>
 			        		<td><a href="#boolean">boolean</a></td>
 			        		<td></td>
 			        		<td></td>
@@ -5565,7 +5846,7 @@
 			        		<td></td>
 			        	</tr>
 			        	<tr>
-			        		<td>unsafeAnonymousClassLoader</td>
+			        		<td>hiddenClassLoader</td>
 			        		<td><a href="#boolean">boolean</a></td>
 			        		<td></td>
 			        		<td></td>
@@ -6285,13 +6566,13 @@
 			        	<tr>
 			        		<td>allocationTime</td>
 			        		<td><a href="#long">long</a></td>
-			        		<td>Timestamp</td>
+			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        	<tr>
 			        		<td>objectAge</td>
 			        		<td><a href="#long">long</a></td>
-			        		<td>Timespan</td>
+			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        	<tr>
@@ -6595,6 +6876,76 @@
 				<br>
 			</div>
 			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.ProcessStart">jdk.ProcessStart <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> Process Start<br>
+			        <b>Description:</b> Operating system process started<br>
+			        <b>Categories:</b> Operating System
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>stackTrace</td>
+			        		<td><a href="#StackTrace">StackTrace</a></td>
+			        		<td></td>
+			        		<td>Stack Trace starting from the method the event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>pid</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>directory</td>
+			        		<td><a href="#String">String</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>command</td>
+			        		<td><a href="#String">String</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
 			    <h1 id="jdk.PromoteObjectInNewPLAB">jdk.PromoteObjectInNewPLAB <span class="uk-label">Event</span></h1>
 			    <hr>
 			    <p class="uk-text-lead"></p>
@@ -6881,6 +7232,70 @@
 				<br>
 			</div>
 			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.RedefineClasses">jdk.RedefineClasses <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> Redefine Classes<br>
+			        <b>Description:</b> <br>
+			        <b>Categories:</b> Java Virtual Machine, Class Loading
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>stackTrace</td>
+			        		<td><a href="#StackTrace">StackTrace</a></td>
+			        		<td></td>
+			        		<td>Stack Trace starting from the method the event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>classCount</td>
+			        		<td><a href="#int">int</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>redefinitionId</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
 			    <h1 id="jdk.ReservedStackActivation">jdk.ReservedStackActivation <span class="uk-label">Event</span></h1>
 			    <hr>
 			    <p class="uk-text-lead"></p>
@@ -6922,6 +7337,70 @@
 			        		<td>method</td>
 			        		<td><a href="#Method">Method</a></td>
 			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.RetransformClasses">jdk.RetransformClasses <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> Retransform Classes<br>
+			        <b>Description:</b> <br>
+			        <b>Categories:</b> Java Virtual Machine, Class Loading
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>stackTrace</td>
+			        		<td><a href="#StackTrace">StackTrace</a></td>
+			        		<td></td>
+			        		<td>Stack Trace starting from the method the event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>classCount</td>
+			        		<td><a href="#int">int</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>redefinitionId</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        </tbody>
@@ -8557,7 +9036,19 @@
 			        		<td>Thread in which event was committed in</td>
 			        	</tr>
 			        	<tr>
+			        		<td>stackTrace</td>
+			        		<td><a href="#StackTrace">StackTrace</a></td>
+			        		<td></td>
+			        		<td>Stack Trace starting from the method the event was committed in</td>
+			        	</tr>
+			        	<tr>
 			        		<td>thread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>parentThread</td>
 			        		<td><a href="#Thread">Thread</a></td>
 			        		<td></td>
 			        		<td></td>
@@ -9111,11 +9602,69 @@
 				<br>
 			</div>
 			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.ZAllocationStall">jdk.ZAllocationStall <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> ZGC Allocation Stall<br>
+			        <b>Description:</b> Time spent waiting for memory to become available<br>
+			        <b>Categories:</b> Java Virtual Machine, GC, Detailed
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>type</td>
+			        		<td><a href="#String">String</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>size</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
 			    <h1 id="jdk.ZPageAllocation">jdk.ZPageAllocation <span class="uk-label">Event</span></h1>
 			    <hr>
 			    <p class="uk-text-lead"></p>
 			    <p>
-			        <b>Label:</b> ZPage Allocation<br>
+			        <b>Label:</b> ZGC Page Allocation<br>
 			        <b>Description:</b> Allocation of a ZPage<br>
 			        <b>Categories:</b> Java Virtual Machine, GC, Detailed
 			    </p>
@@ -9149,26 +9698,38 @@
 			        		<td>Thread in which event was committed in</td>
 			        	</tr>
 			        	<tr>
-			        		<td>pageSize</td>
+			        		<td>stackTrace</td>
+			        		<td><a href="#StackTrace">StackTrace</a></td>
+			        		<td></td>
+			        		<td>Stack Trace starting from the method the event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>type</td>
+			        		<td><a href="#String">String</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>size</td>
 			        		<td><a href="#long">long</a></td>
 			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        	<tr>
-			        		<td>usedAfter</td>
+			        		<td>flushed</td>
 			        		<td><a href="#long">long</a></td>
 			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        	<tr>
-			        		<td>freeAfter</td>
+			        		<td>committed</td>
 			        		<td><a href="#long">long</a></td>
 			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        	<tr>
-			        		<td>inCacheAfter</td>
-			        		<td><a href="#long">long</a></td>
+			        		<td>segments</td>
+			        		<td><a href="#int">int</a></td>
 			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
@@ -9193,11 +9754,163 @@
 				<br>
 			</div>
 			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.ZRelocationSet">jdk.ZRelocationSet <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> ZGC Relocation Set<br>
+			        <b>Description:</b> <br>
+			        <b>Categories:</b> Java Virtual Machine, GC, Detailed
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>total</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>empty</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>compactingFrom</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>compactingTo</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.ZRelocationSetGroup">jdk.ZRelocationSetGroup <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> ZGC Relocation Set Group<br>
+			        <b>Description:</b> <br>
+			        <b>Categories:</b> Java Virtual Machine, GC, Detailed
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>type</td>
+			        		<td><a href="#String">String</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>pages</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>total</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>empty</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>compactingFrom</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>compactingTo</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
 			    <h1 id="jdk.ZStatisticsCounter">jdk.ZStatisticsCounter <span class="uk-label">Event</span></h1>
 			    <hr>
 			    <p class="uk-text-lead"></p>
 			    <p>
-			        <b>Label:</b> Z Statistics Counter<br>
+			        <b>Label:</b> ZGC Statistics Counter<br>
 			        <b>Description:</b> <br>
 			        <b>Categories:</b> Java Virtual Machine, GC, Detailed
 			    </p>
@@ -9261,7 +9974,7 @@
 			    <hr>
 			    <p class="uk-text-lead"></p>
 			    <p>
-			        <b>Label:</b> Z Statistics Sampler<br>
+			        <b>Label:</b> ZGC Statistics Sampler<br>
 			        <b>Description:</b> <br>
 			        <b>Categories:</b> Java Virtual Machine, GC, Detailed
 			    </p>
@@ -9362,6 +10075,110 @@
 			        		<td>name</td>
 			        		<td><a href="#String">String</a></td>
 			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.ZUncommit">jdk.ZUncommit <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> ZGC Uncommit<br>
+			        <b>Description:</b> Uncommitting of memory<br>
+			        <b>Categories:</b> Java Virtual Machine, GC, Detailed
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>uncommitted</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
+			        		<td></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="jdk.ZUnmap">jdk.ZUnmap <span class="uk-label">Event</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> ZGC Unmap<br>
+			        <b>Description:</b> Unmapping of memory<br>
+			        <b>Categories:</b> Java Virtual Machine, GC, Detailed
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>startTime</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timestamp</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>duration</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Timespan</td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>eventThread</td>
+			        		<td><a href="#Thread">Thread</a></td>
+			        		<td></td>
+			        		<td>Thread in which event was committed in</td>
+			        	</tr>
+			        	<tr>
+			        		<td>unmapped</td>
+			        		<td><a href="#long">long</a></td>
+			        		<td>Unsigned</td>
 			        		<td></td>
 			        	</tr>
 			        </tbody>
@@ -9628,6 +10445,12 @@
 			        	<tr>
 			        		<td>modifiers</td>
 			        		<td><a href="#int">int</a></td>
+			        		<td></td>
+			        		<td></td>
+			        	</tr>
+			        	<tr>
+			        		<td>hidden</td>
+			        		<td><a href="#boolean">boolean</a></td>
 			        		<td></td>
 			        		<td></td>
 			        	</tr>
@@ -11487,6 +12310,39 @@
 			        		<td><a href="#long">long</a></td>
 			        		<td>Unsigned</td>
 			        		<td>Size of the reserved memory for the virtual space</td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+				<br>
+				<hr class="uk-divider-icon">
+				<br>
+			</div>
+			<div class="uk-container uk-container-small uk-position-relative">
+			    <h1 id="ZPageTypeType">ZPageTypeType <span class="uk-label uk-label-warning">Type</span></h1>
+			    <hr>
+			    <p class="uk-text-lead"></p>
+			    <p>
+			        <b>Label:</b> Z Page Type<br>
+			        <b>Description:</b> <br>
+			    </p>
+			    <table class="uk-table uk-table-hover uk-table-divider uk-table-small">
+			        <caption>Attributes</caption>
+			        <thead>
+			            <tr>
+			                <th>Name</th>
+			                <th>Type</th>
+			                <th>ContentType</th>
+			                <th>Description</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+			        		<td>type</td>
+			        		<td><a href="#String">String</a></td>
+			        		<td></td>
+			        		<td></td>
 			        	</tr>
 			        </tbody>
 			    </table>
