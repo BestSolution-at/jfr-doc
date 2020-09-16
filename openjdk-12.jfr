@@ -1,0 +1,4588 @@
+class boolean {
+}
+
+class byte {
+}
+
+class char {
+}
+
+class double {
+}
+
+class float {
+}
+
+class int {
+}
+
+class long {
+}
+
+class short {
+}
+
+@Name("java.lang.Class")
+@Label("Java Class")
+class Class {
+  @Label("Class Loader")
+  ClassLoader classLoader;
+
+  @Label("Name")
+  String name;
+
+  @Label("Package")
+  Package package;
+
+  @Label("Access Modifiers")
+  int modifiers;
+}
+
+@Name("java.lang.String")
+class String {
+}
+
+@Name("java.lang.Thread")
+@Label("Thread")
+class Thread {
+  @Label("OS Thread Name")
+  String osName;
+
+  @Label("OS Thread Id")
+  long osThreadId;
+
+  @Label("Java Thread Name")
+  String javaName;
+
+  @Label("Java Thread Id")
+  long javaThreadId;
+
+  @Label("Java Thread Group")
+  ThreadGroup group;
+}
+
+@Name("jdk.types.CalleeMethod")
+class CalleeMethod {
+  @Label("Class")
+  String type;
+
+  @Label("Method Name")
+  String name;
+
+  @Label("Method Descriptor")
+  String descriptor;
+}
+
+@Name("jdk.types.ClassLoader")
+@Label("Java Class Loader")
+class ClassLoader {
+  @Label("Type")
+  Class type;
+
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.types.CodeBlobType")
+@Label("Code Blob Type")
+class CodeBlobType {
+  @Label("Type")
+  String type;
+}
+
+@Name("jdk.types.CompilerPhaseType")
+@Label("Compiler Phase Type")
+class CompilerPhaseType {
+  @Label("Phase")
+  String phase;
+}
+
+@Name("jdk.types.CopyFailed")
+class CopyFailed {
+  @Unsigned
+  @Label("Object Count")
+  long objectCount;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("First Failed Object Size")
+  long firstSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Smallest Failed Object Size")
+  long smallestSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Total Object Size")
+  long totalSize;
+}
+
+@Name("jdk.types.FlagValueOrigin")
+@Label("Flag Value Origin")
+class FlagValueOrigin {
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.types.FrameType")
+@Label("Frame type")
+class FrameType {
+  @Label("Description")
+  String description;
+}
+
+@Name("jdk.types.G1EvacuationStatistics")
+class G1EvacuationStatistics {
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Allocated")
+  @Description("Total memory allocated by PLABs")
+  long allocated;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Wasted")
+  @Description("Total memory wasted within PLABs due to alignment or refill")
+  long wasted;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Used")
+  @Description("Total memory occupied by objects within PLABs")
+  long used;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Undo Wasted")
+  @Description("Total memory wasted due to allocation undo within PLABs")
+  long undoWaste;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Region End Wasted")
+  @Description("Total memory wasted at the end of regions due to refill")
+  long regionEndWaste;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Region Refills")
+  @Description("Total memory wasted at the end of regions due to refill")
+  int regionsRefilled;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Allocated (direct)")
+  @Description("Total memory allocated using direct allocation outside of PLABs")
+  long directAllocated;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Used (failure)")
+  @Description("Total memory occupied by objects in regions where evacuation failed")
+  long failureUsed;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Wasted (failure)")
+  @Description("Total memory left unused in regions where evacuation failed")
+  long failureWaste;
+}
+
+@Name("jdk.types.G1HeapRegionType")
+@Label("G1 Heap Region Type")
+class G1HeapRegionType {
+  @Label("Type")
+  String type;
+}
+
+@Name("jdk.types.G1YCType")
+@Label("G1 YC Type")
+class G1YCType {
+  @Label("Type")
+  String type;
+}
+
+@Name("jdk.types.GCCause")
+@Label("GC Cause")
+class GCCause {
+  @Label("Cause")
+  String cause;
+}
+
+@Name("jdk.types.GCName")
+@Label("GC Name")
+class GCName {
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.types.GCThresholdUpdater")
+@Label("GC Threshold Updater")
+class GCThresholdUpdater {
+  @Label("Updater")
+  String updater;
+}
+
+@Name("jdk.types.GCWhen")
+@Label("GC When")
+class GCWhen {
+  @Label("When")
+  String when;
+}
+
+@Name("jdk.types.InflateCause")
+@Label("Inflation Cause")
+class InflateCause {
+  @Label("Cause")
+  String cause;
+}
+
+@Name("jdk.types.MetadataType")
+@Label("Metadata Type")
+class MetadataType {
+  @Label("Type")
+  String type;
+}
+
+@Name("jdk.types.MetaspaceObjectType")
+@Label("Metaspace Object Type")
+class MetaspaceObjectType {
+  @Label("Type")
+  String type;
+}
+
+@Name("jdk.types.MetaspaceSizes")
+class MetaspaceSizes {
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Committed")
+  @Description("Committed memory for this space")
+  long committed;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Used")
+  @Description("Bytes allocated by objects in the space")
+  long used;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Reserved")
+  @Description("Reserved memory for this space")
+  long reserved;
+}
+
+@Name("jdk.types.Method")
+@Label("Java Method")
+class Method {
+  @Label("Type")
+  Class type;
+
+  @Label("Name")
+  String name;
+
+  @Label("Descriptor")
+  String descriptor;
+
+  @Label("Access Modifiers")
+  int modifiers;
+
+  @Label("Hidden")
+  boolean hidden;
+}
+
+@Name("jdk.types.Module")
+@Label("Module")
+class Module {
+  @Label("Name")
+  String name;
+
+  @Label("Version")
+  String version;
+
+  @Label("Location")
+  String location;
+
+  @Label("Class Loader")
+  ClassLoader classLoader;
+}
+
+@Name("jdk.types.NarrowOopMode")
+@Label("Narrow Oop Mode")
+class NarrowOopMode {
+  @Label("Mode")
+  String mode;
+}
+
+@Name("jdk.types.NetworkInterfaceName")
+@Label("Network Interface")
+class NetworkInterfaceName {
+  @Label("Network Interface")
+  @Description("Network Interface Name")
+  String networkInterface;
+}
+
+@Name("jdk.types.ObjectSpace")
+class ObjectSpace {
+  @Unsigned
+  @MemoryAddress
+  @Label("Start Address")
+  @Description("Start address of the space")
+  long start;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("End Address")
+  @Description("End address of the space")
+  long end;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Used")
+  @Description("Bytes allocated by objects in the space")
+  long used;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Size")
+  @Description("Size of the space")
+  long size;
+}
+
+@Name("jdk.types.OldObject")
+@Label("Old Object")
+class OldObject {
+  @Unsigned
+  @MemoryAddress
+  @Label("Memory Address")
+  long address;
+
+  @Label("Java Class")
+  Class type;
+
+  @Label("Object Description")
+  @Description("Object description")
+  String description;
+
+  @Label("Referrer Object")
+  @Description("Object referencing this object")
+  Reference referrer;
+}
+
+@Name("jdk.types.OldObjectArray")
+@Label("Old Object Array")
+class OldObjectArray {
+  @Label("Array Size")
+  @Description("Size of array")
+  int size;
+
+  @Label("Index")
+  @Description("Index in the array")
+  int index;
+}
+
+@Name("jdk.types.OldObjectField")
+@Label("Old Object Field")
+class OldObjectField {
+  @Label("Field")
+  @Description("Name of field")
+  String name;
+
+  @Label("Field Modifiers")
+  @Description("Field modifiers")
+  short modifiers;
+}
+
+@Name("jdk.types.OldObjectGcRoot")
+@Label("GC Root")
+class OldObjectGcRoot {
+  @Label("Root Description")
+  @Description("Root information")
+  String description;
+
+  @Label("System")
+  @Description("The subsystem of origin for the root")
+  String system;
+
+  @Label("Type")
+  @Description("The root type")
+  String type;
+}
+
+@Name("jdk.types.OldObjectRootSystem")
+@Label("GC Root System")
+class OldObjectRootSystem {
+  @Label("System")
+  String system;
+}
+
+@Name("jdk.types.OldObjectRootType")
+@Label("GC Root Type")
+class OldObjectRootType {
+  @Label("Type")
+  String type;
+}
+
+@Name("jdk.types.Package")
+@Label("Package")
+class Package {
+  @Label("Name")
+  String name;
+
+  @Label("Module")
+  Module module;
+
+  @Label("Exported")
+  boolean exported;
+}
+
+@Name("jdk.types.Reference")
+@Label("Reference")
+class Reference {
+  @Label("Array Information")
+  @Description("Array or null if it is not an array")
+  OldObjectArray array;
+
+  @Label("Field Information")
+  @Description("Field or null if it is an array")
+  OldObjectField field;
+
+  @Label("Object")
+  @Description("Object holder for this reference")
+  OldObject object;
+
+  @Label("Skip Value")
+  @Description("The object is this many hops away")
+  int skip;
+}
+
+@Name("jdk.types.ReferenceType")
+@Label("Reference Type")
+class ReferenceType {
+  @Label("Type")
+  String type;
+}
+
+@Name("jdk.types.StackFrame")
+class StackFrame {
+  @Label("Java Method")
+  Method method;
+
+  @Label("Line Number")
+  int lineNumber;
+
+  @Label("Bytecode Index")
+  int bytecodeIndex;
+
+  @Label("Frame Type")
+  String type;
+}
+
+@Name("jdk.types.StackTrace")
+@Label("Stacktrace")
+class StackTrace {
+  @Label("Truncated")
+  boolean truncated;
+
+  @Label("Stack Frames")
+  StackFrame[] frames;
+}
+
+@Name("jdk.types.Symbol")
+@Label("Symbol")
+class Symbol {
+  @Label("String")
+  String string;
+}
+
+@Name("jdk.types.ThreadGroup")
+@Label("Thread Group")
+class ThreadGroup {
+  @Label("Parent")
+  ThreadGroup parent;
+
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.types.ThreadState")
+@Label("Java Thread State")
+class ThreadState {
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.types.VMOperationType")
+@Label("VM Operation Type")
+class VMOperationType {
+  @Label("Type")
+  String type;
+}
+
+@Name("jdk.types.VirtualSpace")
+class VirtualSpace {
+  @Unsigned
+  @MemoryAddress
+  @Label("Start Address")
+  @Description("Start address of the virtual space")
+  long start;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Committed End Address")
+  @Description("End address of the committed memory for the virtual space")
+  long committedEnd;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Committed Size")
+  @Description("Size of the committed memory for the virtual space")
+  long committedSize;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Reserved End Address")
+  @Description("End address of the reserved memory for the virtual space")
+  long reservedEnd;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Reserved Size")
+  @Description("Size of the reserved memory for the virtual space")
+  long reservedSize;
+}
+
+@Name("jdk.types.ZStatisticsCounterType")
+@Label("Z Statistics Counter")
+class ZStatisticsCounterType {
+  @Label("Counter")
+  String counter;
+}
+
+@Name("jdk.types.ZStatisticsSamplerType")
+@Label("Z Statistics Sampler")
+class ZStatisticsSamplerType {
+  @Label("Sampler")
+  String sampler;
+}
+
+@Name("jdk.jfr.BooleanFlag")
+@ContentType
+@Label("Flag")
+class BooleanFlag extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.jfr.Category")
+class Category extends java.lang.annotation.Annotation {
+  String[] value;
+}
+
+@Name("jdk.jfr.ContentType")
+@Label("Content Type")
+@Description("Semantic meaning of a value")
+class ContentType extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.jfr.DataAmount")
+@ContentType
+@Label("Data Amount")
+@Description("Amount of data")
+class DataAmount extends java.lang.annotation.Annotation {
+  String value;
+}
+
+@Name("jdk.jfr.Description")
+class Description extends java.lang.annotation.Annotation {
+  String value;
+}
+
+@Name("jdk.jfr.Enabled")
+class Enabled extends java.lang.annotation.Annotation {
+  boolean value;
+}
+
+@Name("jdk.jfr.Experimental")
+@Label("Experimental")
+@Description("Element is not to be shown to a user by default")
+class Experimental extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.jfr.Frequency")
+@ContentType
+@Label("Frequency")
+@Description("Measure of how often something occurs, in Hertz")
+class Frequency extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.jfr.Label")
+class Label extends java.lang.annotation.Annotation {
+  String value;
+}
+
+@Name("jdk.jfr.MemoryAddress")
+@ContentType
+@Label("Memory Address")
+@Description("Represents a physical memory address")
+class MemoryAddress extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.jfr.Name")
+class Name extends java.lang.annotation.Annotation {
+  String value;
+}
+
+@Name("jdk.jfr.Percentage")
+@ContentType
+@Label("Percentage")
+@Description("Percentage, represented as a number between 0 and 1")
+class Percentage extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.jfr.Period")
+class Period extends java.lang.annotation.Annotation {
+  String value;
+}
+
+@Name("jdk.jfr.Relational")
+@Label("Relation")
+class Relational extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.jfr.StackTrace")
+class StackTrace extends java.lang.annotation.Annotation {
+  boolean value;
+}
+
+@Name("jdk.jfr.Threshold")
+class Threshold extends java.lang.annotation.Annotation {
+  String value;
+}
+
+@Name("jdk.jfr.Timespan")
+@ContentType
+@Label("Timespan")
+@Description("A duration, measured in nanoseconds by default")
+class Timespan extends java.lang.annotation.Annotation {
+  String value;
+}
+
+@Name("jdk.jfr.Timestamp")
+@ContentType
+@Label("Timestamp")
+@Description("A point in time")
+class Timestamp extends java.lang.annotation.Annotation {
+  String value;
+}
+
+@Name("jdk.jfr.TransitionFrom")
+@Label("Transition From")
+class TransitionFrom extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.jfr.Unsigned")
+@ContentType
+@Label("Unsigned Value")
+@Description("Value should be interpreted as unsigned data type")
+class Unsigned extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.jfr.internal.Cutoff")
+class Cutoff extends java.lang.annotation.Annotation {
+  String value;
+}
+
+@Name("jdk.types.CompileId")
+@Relational
+class CompileId extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.types.GcId")
+@Relational
+class GcId extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.types.JavaMonitorAddress")
+@Relational
+class JavaMonitorAddress extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.types.SafepointId")
+@Relational
+class SafepointId extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.types.SweepId")
+@Relational
+class SweepId extends java.lang.annotation.Annotation {
+}
+
+@Name("jdk.settings.Cutoff")
+@Label("Cutoff")
+@Description("Limit running time of event")
+@Name("jdk.settings.Cutoff")
+@Timespan("NANOSECONDS")
+class Cutoff extends jdk.jfr.SettingControl {
+}
+
+@Name("jdk.settings.Enabled")
+@Label("Enabled")
+@Description("Record event")
+@Name("jdk.settings.Enabled")
+@BooleanFlag
+class Enabled extends jdk.jfr.SettingControl {
+}
+
+@Name("jdk.settings.Period")
+@Label("Period")
+@Description("Record event at interval")
+@Name("jdk.settings.Period")
+class Period extends jdk.jfr.SettingControl {
+}
+
+@Name("jdk.settings.StackTrace")
+@Label("Stack Trace")
+@Name("jdk.settings.StackTrace")
+@Description("Record stack traces")
+@BooleanFlag
+class StackTrace extends jdk.jfr.SettingControl {
+}
+
+@Name("jdk.settings.Threshold")
+@Label("Threshold")
+@Name("jdk.settings.Threshold")
+@Description("Record event with duration above or equal to threshold")
+@Timespan("NANOSECONDS")
+class Threshold extends jdk.jfr.SettingControl {
+}
+
+@Name("jdk.ActiveRecording")
+@Name("jdk.ActiveRecording")
+@Label("Flight Recording")
+@Category("Flight Recorder")
+class ActiveRecording extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Id")
+  long id;
+
+  @Label("Name")
+  String name;
+
+  @Label("Destination")
+  String destination;
+
+  @Label("Max Age")
+  @Timespan("MILLISECONDS")
+  long maxAge;
+
+  @Label("Max Size")
+  @DataAmount("BYTES")
+  long maxSize;
+
+  @Label("Start Time")
+  @Timestamp("MILLISECONDS_SINCE_EPOCH")
+  long recordingStart;
+
+  @Label("Recording Duration")
+  @Timespan("MILLISECONDS")
+  long recordingDuration;
+}
+
+@Name("jdk.ActiveSetting")
+@Name("jdk.ActiveSetting")
+@Label("Recording Setting")
+@Category("Flight Recorder")
+class ActiveSetting extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Event Id")
+  long id;
+
+  @Label("Setting Name")
+  String name;
+
+  @Label("Setting Value")
+  String value;
+}
+
+@Name("jdk.AllocationRequiringGC")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Allocation Requiring GC")
+class AllocationRequiringGC extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Unsigned
+  @GcId
+  @Label("Pending GC Identifier")
+  int gcId;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Allocation Size")
+  long size;
+}
+
+@Name("jdk.BiasedLockClassRevocation")
+@Category({"Java Virtual Machine", "Runtime"})
+@Label("Biased Lock Class Revocation")
+@Description("Revoked biases for all instances of a class")
+class BiasedLockClassRevocation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Revoked Class")
+  @Description("Class whose biased locks were revoked")
+  Class revokedClass;
+
+  @Label("Disable Further Biasing")
+  @Description("Whether further biasing for instances of this class will be allowed")
+  boolean disableBiasing;
+
+  @Unsigned
+  @SafepointId
+  @Label("Safepoint Identifier")
+  long safepointId;
+}
+
+@Name("jdk.BiasedLockRevocation")
+@Category({"Java Virtual Machine", "Runtime"})
+@Label("Biased Lock Revocation")
+@Description("Revoked bias of object")
+class BiasedLockRevocation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Lock Class")
+  @Description("Class of object whose biased lock was revoked")
+  Class lockClass;
+
+  @Unsigned
+  @SafepointId
+  @Label("Safepoint Identifier")
+  long safepointId;
+
+  @Label("Previous Owner")
+  @Description("Thread owning the bias before revocation")
+  Thread previousOwner;
+}
+
+@Name("jdk.BiasedLockSelfRevocation")
+@Category({"Java Virtual Machine", "Runtime"})
+@Label("Biased Lock Self Revocation")
+@Description("Revoked bias of object biased towards own thread")
+class BiasedLockSelfRevocation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Lock Class")
+  @Description("Class of object whose biased lock was revoked")
+  Class lockClass;
+}
+
+@Name("jdk.BooleanFlag")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Boolean Flag")
+class BooleanFlag extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Value")
+  boolean value;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.BooleanFlagChanged")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Boolean Flag Changed")
+class BooleanFlagChanged extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Old Value")
+  boolean oldValue;
+
+  @Label("New Value")
+  boolean newValue;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.CPUInformation")
+@Category({"Operating System", "Processor"})
+@Label("CPU Information")
+class CPUInformation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Type")
+  String cpu;
+
+  @Label("Description")
+  String description;
+
+  @Unsigned
+  @Label("Sockets")
+  int sockets;
+
+  @Unsigned
+  @Label("Cores")
+  int cores;
+
+  @Unsigned
+  @Label("Hardware Threads")
+  int hwThreads;
+}
+
+@Name("jdk.CPULoad")
+@Category({"Operating System", "Processor"})
+@Label("CPU Load")
+@Description("OS CPU Load")
+class CPULoad extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Percentage
+  @Label("JVM User")
+  float jvmUser;
+
+  @Percentage
+  @Label("JVM System")
+  float jvmSystem;
+
+  @Percentage
+  @Label("Machine Total")
+  float machineTotal;
+}
+
+@Name("jdk.CPUTimeStampCounter")
+@Category({"Operating System", "Processor"})
+@Label("CPU Time Stamp Counter")
+class CPUTimeStampCounter extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Fast Time")
+  boolean fastTimeEnabled;
+
+  @Label("Trusted Platform")
+  boolean fastTimeAutoEnabled;
+
+  @Frequency
+  @Label("OS Frequency")
+  long osFrequency;
+
+  @Frequency
+  @Label("Fast Time Frequency")
+  long fastTimeFrequency;
+}
+
+@Name("jdk.ClassDefine")
+@Category({"Java Virtual Machine", "Class Loading"})
+@Label("Class Define")
+class ClassDefine extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Defined Class")
+  Class definedClass;
+
+  @Label("Defining Class Loader")
+  ClassLoader definingClassLoader;
+}
+
+@Name("jdk.ClassLoad")
+@Category({"Java Virtual Machine", "Class Loading"})
+@Label("Class Load")
+class ClassLoad extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Loaded Class")
+  Class loadedClass;
+
+  @Label("Defining Class Loader")
+  ClassLoader definingClassLoader;
+
+  @Label("Initiating Class Loader")
+  ClassLoader initiatingClassLoader;
+}
+
+@Name("jdk.ClassLoaderStatistics")
+@Category({"Java Application", "Statistics"})
+@Label("Class Loader Statistics")
+class ClassLoaderStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Class Loader")
+  ClassLoader classLoader;
+
+  @Label("Parent Class Loader")
+  ClassLoader parentClassLoader;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("ClassLoaderData Pointer")
+  @Description("Pointer to the ClassLoaderData structure in the JVM")
+  long classLoaderData;
+
+  @Label("Classes")
+  @Description("Number of loaded classes")
+  long classCount;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Total Chunk Size")
+  @Description("Total size of all allocated metaspace chunks (each chunk has several blocks)")
+  long chunkSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Total Block Size")
+  @Description("Total size of all allocated metaspace blocks (each chunk has several blocks)")
+  long blockSize;
+
+  @Label("Unsafe Anonymous Classes")
+  @Description("Number of loaded classes to support invokedynamic")
+  long unsafeAnonymousClassCount;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Total Unsafe Anonymous Classes Chunk Size")
+  @Description("Total size of all allocated metaspace chunks for unsafe anonymous classes (each chunk has several blocks)")
+  long unsafeAnonymousChunkSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Total Unsafe Anonymous Classes Block Size")
+  @Description("Total size of all allocated metaspace blocks for unsafe anonymous classes (each chunk has several blocks)")
+  long unsafeAnonymousBlockSize;
+}
+
+@Name("jdk.ClassLoadingStatistics")
+@Category({"Java Application", "Statistics"})
+@Label("Class Loading Statistics")
+class ClassLoadingStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Loaded Class Count")
+  @Description("Number of classes loaded since JVM start")
+  long loadedClassCount;
+
+  @Label("Unloaded Class Count")
+  @Description("Number of classes unloaded since JVM start")
+  long unloadedClassCount;
+}
+
+@Name("jdk.ClassUnload")
+@Category({"Java Virtual Machine", "Class Loading"})
+@Label("Class Unload")
+class ClassUnload extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Unloaded Class")
+  Class unloadedClass;
+
+  @Label("Defining Class Loader")
+  ClassLoader definingClassLoader;
+}
+
+@Name("jdk.CodeCacheConfiguration")
+@Category({"Java Virtual Machine", "Code Cache"})
+@Label("Code Cache Configuration")
+class CodeCacheConfiguration extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Initial Size")
+  long initialSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Reserved Size")
+  long reservedSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Non-nmethod Size")
+  long nonNMethodSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Profiled Size")
+  long profiledSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Non-profiled Size")
+  long nonProfiledSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Expansion size")
+  long expansionSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Minimum Block Length")
+  long minBlockLength;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Start Address")
+  long startAddress;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Reserved Top")
+  long reservedTopAddress;
+}
+
+@Name("jdk.CodeCacheFull")
+@Category({"Java Virtual Machine", "Code Cache"})
+@Label("Code Cache Full")
+class CodeCacheFull extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Code Heap")
+  String codeBlobType;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Start Address")
+  long startAddress;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Commited Top")
+  long commitedTopAddress;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Reserved Top")
+  long reservedTopAddress;
+
+  @Label("Entries")
+  int entryCount;
+
+  @Label("Methods")
+  int methodCount;
+
+  @Label("Adaptors")
+  int adaptorCount;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Unallocated")
+  long unallocatedCapacity;
+
+  @Label("Full Count")
+  int fullCount;
+}
+
+@Name("jdk.CodeCacheStatistics")
+@Category({"Java Virtual Machine", "Code Cache"})
+@Label("Code Cache Statistics")
+class CodeCacheStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Code Heap")
+  String codeBlobType;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Start Address")
+  long startAddress;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Reserved Top")
+  long reservedTopAddress;
+
+  @Label("Entries")
+  int entryCount;
+
+  @Label("Methods")
+  int methodCount;
+
+  @Label("Adaptors")
+  int adaptorCount;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Unallocated")
+  long unallocatedCapacity;
+
+  @Label("Full Count")
+  int fullCount;
+}
+
+@Name("jdk.CodeSweeperConfiguration")
+@Category({"Java Virtual Machine", "Code Sweeper"})
+@Label("Code Sweeper Configuration")
+class CodeSweeperConfiguration extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Code Sweeper Enabled")
+  boolean sweeperEnabled;
+
+  @Label("Code Cache Flushing Enabled")
+  boolean flushingEnabled;
+}
+
+@Name("jdk.CodeSweeperStatistics")
+@Category({"Java Virtual Machine", "Code Sweeper"})
+@Label("Code Sweeper Statistics")
+class CodeSweeperStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Sweeps")
+  int sweepCount;
+
+  @Label("Methods Reclaimed")
+  int methodReclaimedCount;
+
+  @Timespan("TICKS")
+  @Label("Time Spent Sweeping")
+  long totalSweepTime;
+
+  @Timespan("TICKS")
+  @Label("Peak Time Fraction Sweep")
+  long peakFractionTime;
+
+  @Timespan("TICKS")
+  @Label("Peak Time Full Sweep")
+  long peakSweepTime;
+}
+
+@Name("jdk.Compilation")
+@Category({"Java Virtual Machine", "Compiler"})
+@Label("Compilation")
+class Compilation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Java Method")
+  Method method;
+
+  @Unsigned
+  @CompileId
+  @Label("Compilation Identifier")
+  int compileId;
+
+  @Unsigned
+  @Label("Compilation Level")
+  short compileLevel;
+
+  @Label("Succeeded")
+  boolean succeded;
+
+  @Label("On Stack Replacement")
+  boolean isOsr;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Compiled Code Size")
+  long codeSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Inlined Code Size")
+  long inlinedBytes;
+}
+
+@Name("jdk.CompilationFailure")
+@Category({"Java Virtual Machine", "Compiler"})
+@Label("Compilation Failure")
+class CompilationFailure extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Failure Message")
+  String failureMessage;
+
+  @Unsigned
+  @CompileId
+  @Label("Compilation Identifier")
+  int compileId;
+}
+
+@Name("jdk.CompilerConfiguration")
+@Category({"Java Virtual Machine", "Compiler"})
+@Label("Compiler Configuration")
+class CompilerConfiguration extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Thread Count")
+  int threadCount;
+
+  @Label("Tiered Compilation")
+  boolean tieredCompilation;
+}
+
+@Name("jdk.CompilerInlining")
+@Category({"Java Virtual Machine", "Compiler", "Optimization"})
+@Label("Method Inlining")
+class CompilerInlining extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @CompileId
+  @Label("Compilation Identifier")
+  int compileId;
+
+  @Label("Caller Method")
+  Method caller;
+
+  @Label("Callee Method")
+  CalleeMethod callee;
+
+  @Label("Succeeded")
+  boolean succeeded;
+
+  @Label("Message")
+  String message;
+
+  @Label("Byte Code Index")
+  int bci;
+}
+
+@Name("jdk.CompilerPhase")
+@Category({"Java Virtual Machine", "Compiler"})
+@Label("Compiler Phase")
+class CompilerPhase extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Compile Phase")
+  String phase;
+
+  @Unsigned
+  @CompileId
+  @Label("Compilation Identifier")
+  int compileId;
+
+  @Unsigned
+  @Label("Phase Level")
+  short phaseLevel;
+}
+
+@Name("jdk.CompilerStatistics")
+@Category({"Java Virtual Machine", "Compiler"})
+@Label("Compiler Statistics")
+class CompilerStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Compiled Methods")
+  int compileCount;
+
+  @Label("Bailouts")
+  int bailoutCount;
+
+  @Label("Invalidated Compilations")
+  int invalidatedCount;
+
+  @Label("OSR Compilations")
+  int osrCompileCount;
+
+  @Label("Standard Compilations")
+  int standardCompileCount;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("OSR Bytes Compiled")
+  long osrBytesCompiled;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Standard Bytes Compiled")
+  long standardBytesCompiled;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Compilation Resulting Size")
+  long nmetodsSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Compilation Resulting Code Size")
+  long nmetodCodeSize;
+
+  @Timespan("MILLISECONDS")
+  @Label("Peak Time")
+  long peakTimeSpent;
+
+  @Timespan("MILLISECONDS")
+  @Label("Total time")
+  long totalTimeSpent;
+}
+
+@Name("jdk.ConcurrentModeFailure")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Concurrent Mode Failure")
+@Description("Concurrent Mode failed")
+class ConcurrentModeFailure extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+}
+
+@Name("jdk.DataLoss")
+@Category("Flight Recorder")
+@Label("Data Loss")
+@Description("Data could not be copied out from a buffer, typically because of contention")
+class DataLoss extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Amount")
+  @Description("Amount lost data")
+  long amount;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Total")
+  @Description("Total lost amount for thread")
+  long total;
+}
+
+@Name("jdk.DoubleFlag")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Double Flag")
+class DoubleFlag extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Value")
+  double value;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.DoubleFlagChanged")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Double Flag Changed")
+class DoubleFlagChanged extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Old Value")
+  double oldValue;
+
+  @Label("New Value")
+  double newValue;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.DumpReason")
+@Category("Flight Recorder")
+@Label("Recording Reason")
+@Description("Who requested the recording and why")
+class DumpReason extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Reason")
+  @Description("Reason for writing recording data to disk")
+  String reason;
+
+  @Label("Recording Id")
+  @Description("Id of the recording that triggered the dump, or -1 if it was not related to a recording")
+  int recordingId;
+}
+
+@Name("jdk.EvacuationFailed")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Evacuation Failed")
+@Description("Evacuation of an object failed")
+class EvacuationFailed extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Evacuation Failed Data")
+  CopyFailed evacuationFailed;
+}
+
+@Name("jdk.EvacuationInformation")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Evacuation Information")
+class EvacuationInformation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Unsigned
+  @Label("Collection Set Regions")
+  int cSetRegions;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Collection Set Before")
+  @Description("Memory usage before GC in the collection set regions")
+  long cSetUsedBefore;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Collection Set After")
+  @Description("Memory usage after GC in the collection set regions")
+  long cSetUsedAfter;
+
+  @Unsigned
+  @Label("Allocation Regions")
+  @Description("Regions chosen as allocation regions during evacuation (includes survivors and old space regions)")
+  int allocationRegions;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Allocation Regions Before")
+  @Description("Memory usage before GC in allocation regions")
+  long allocationRegionsUsedBefore;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Allocation Regions After")
+  @Description("Memory usage after GC in allocation regions")
+  long allocationRegionsUsedAfter;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Bytes Copied")
+  long bytesCopied;
+
+  @Unsigned
+  @Label("Regions Freed")
+  int regionsFreed;
+}
+
+@Name("jdk.ExceptionStatistics")
+@Name("jdk.ExceptionStatistics")
+@Label("Exception Statistics")
+@Category({"Java Application", "Statistics"})
+@Description("Number of objects derived from java.lang.Throwable that have been created")
+class ExceptionStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Exceptions Created")
+  long throwables;
+}
+
+@Name("jdk.ExecuteVMOperation")
+@Category({"Java Virtual Machine", "Runtime"})
+@Label("VM Operation")
+@Description("Execution of a VM Operation")
+class ExecuteVMOperation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Operation")
+  String operation;
+
+  @Label("At Safepoint")
+  @Description("If the operation occured at a safepoint")
+  boolean safepoint;
+
+  @Label("Caller Blocked")
+  @Description("If the calling thread was blocked until the operation was complete")
+  boolean blocking;
+
+  @Label("Caller")
+  @Description("Thread requesting operation. If non-blocking, will be set to 0 indicating thread is unknown")
+  @TransitionFrom
+  Thread caller;
+
+  @Unsigned
+  @SafepointId
+  @Label("Safepoint Identifier")
+  @Description("The safepoint (if any) under which this operation was completed")
+  long safepointId;
+}
+
+@Name("jdk.ExecutionSample")
+@Category({"Java Virtual Machine", "Profiling"})
+@Label("Method Profiling Sample")
+@Description("Snapshot of a threads state")
+class ExecutionSample extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Thread")
+  Thread sampledThread;
+
+  @Label("Stack Trace")
+  StackTrace stackTrace;
+
+  @Label("Thread State")
+  String state;
+}
+
+@Name("jdk.FileForce")
+@Name("jdk.FileForce")
+@Label("File Force")
+@Category("Java Application")
+@Description("Force updates to be written to file")
+class FileForce extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Path")
+  @Description("Full path of the file")
+  String path;
+
+  @Label("Update Metadata")
+  @Description("Whether the file metadata is updated")
+  boolean metaData;
+}
+
+@Name("jdk.FileRead")
+@Name("jdk.FileRead")
+@Label("File Read")
+@Category("Java Application")
+@Description("Reading data from a file")
+class FileRead extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Path")
+  @Description("Full path of the file")
+  String path;
+
+  @Label("Bytes Read")
+  @Description("Number of bytes read from the file (possibly 0)")
+  @DataAmount("BYTES")
+  long bytesRead;
+
+  @Label("End of File")
+  @Description("If end of file was reached")
+  boolean endOfFile;
+}
+
+@Name("jdk.FileWrite")
+@Name("jdk.FileWrite")
+@Label("File Write")
+@Category("Java Application")
+@Description("Writing data to a file")
+class FileWrite extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Path")
+  @Description("Full path of the file")
+  String path;
+
+  @Label("Bytes Written")
+  @Description("Number of bytes written to the file")
+  @DataAmount("BYTES")
+  long bytesWritten;
+}
+
+@Name("jdk.G1AdaptiveIHOP")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("G1 Adaptive IHOP Statistics")
+@Description("Statistics related to current adaptive IHOP calculation")
+class G1AdaptiveIHOP extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Threshold")
+  @Description("Current IHOP Threshold")
+  long threshold;
+
+  @Percentage
+  @Label("Threshold")
+  @Description("Current IHOP threshold in percent of the internal target occupancy")
+  float thresholdPercentage;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("IHOP Target Occupancy")
+  @Description("Internal target old generation occupancy to reach at the start of mixed GC")
+  long ihopTargetOccupancy;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Current Occupancy")
+  @Description("Current old generation occupancy")
+  long currentOccupancy;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Additional Buffer")
+  @Experimental
+  @Description("Additional buffer size")
+  long additionalBufferSize;
+
+  @DataAmount("BYTES")
+  @Frequency
+  @Label("Predicted Allocation Rate")
+  @Description("Current predicted allocation rate for the mutator in bytes/second")
+  double predictedAllocationRate;
+
+  @Timespan("MILLISECONDS")
+  @Label("Predicted Marking Duration")
+  @Description("Current predicted time from the end of the last initial mark to the first mixed GC")
+  long predictedMarkingDuration;
+
+  @Label("Prediction Active")
+  @Description("Indicates whether the adaptive IHOP prediction is active")
+  boolean predictionActive;
+}
+
+@Name("jdk.G1BasicIHOP")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("G1 Basic IHOP Statistics")
+@Description("Basic statistics related to current IHOP calculation")
+class G1BasicIHOP extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Current IHOP Threshold")
+  @Description("Current IHOP threshold")
+  long threshold;
+
+  @Percentage
+  @Label("Current IHOP Threshold")
+  @Description("Current IHOP threshold in percent of old generation")
+  float thresholdPercentage;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Target Occupancy")
+  @Description("Target old generation occupancy to reach at the start of mixed GC")
+  long targetOccupancy;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Current Occupancy")
+  @Description("Current old generation occupancy")
+  long currentOccupancy;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Recent Mutator Allocation Size")
+  @Description("Mutator allocation during mutator operation in the most recent interval")
+  long recentMutatorAllocationSize;
+
+  @Timespan("MILLISECONDS")
+  @Label("Recent Mutator Duration")
+  @Description("Time the mutator ran in the most recent interval")
+  long recentMutatorDuration;
+
+  @DataAmount("BYTES")
+  @Frequency
+  @Label("Recent Allocation Rate")
+  @Description("Allocation rate of the mutator in the most recent interval in bytes/second")
+  double recentAllocationRate;
+
+  @Timespan("MILLISECONDS")
+  @Label("Last Marking Duration")
+  @Description("Last time from the end of the last initial mark to the first mixed GC")
+  long lastMarkingDuration;
+}
+
+@Name("jdk.G1EvacuationOldStatistics")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("G1 Evacuation Memory Statistics for Old")
+@Description("Memory related evacuation statistics during GC for the old generation")
+class G1EvacuationOldStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Evacuation Statistics")
+  G1EvacuationStatistics statistics;
+}
+
+@Name("jdk.G1EvacuationYoungStatistics")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("G1 Evacuation Statistics for Young")
+@Description("Memory related evacuation statistics during GC for the young generation")
+class G1EvacuationYoungStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Evacuation Statistics")
+  G1EvacuationStatistics statistics;
+}
+
+@Name("jdk.G1GarbageCollection")
+@Category({"Java Virtual Machine", "GC", "Collector"})
+@Label("G1 Garbage Collection")
+@Description("Extra information specific to G1 Garbage Collections")
+class G1GarbageCollection extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Type")
+  String type;
+}
+
+@Name("jdk.G1HeapRegionInformation")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("G1 Heap Region Information")
+@Description("Information about a specific heap region in the G1 GC")
+class G1HeapRegionInformation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @Label("Index")
+  int index;
+
+  @Label("Type")
+  String type;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Start")
+  long start;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Used")
+  long used;
+}
+
+@Name("jdk.G1HeapRegionTypeChange")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("G1 Heap Region Type Change")
+@Description("Information about a G1 heap region type change")
+class G1HeapRegionTypeChange extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @Label("Index")
+  int index;
+
+  @Label("From")
+  String from;
+
+  @Label("To")
+  String to;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Start")
+  long start;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Used")
+  long used;
+}
+
+@Name("jdk.G1HeapSummary")
+@Category({"Java Virtual Machine", "GC", "Heap"})
+@Label("G1 Heap Summary")
+class G1HeapSummary extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("When")
+  String when;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Eden Used Size")
+  long edenUsedSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Eden Total Size")
+  long edenTotalSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Survivor Used Size")
+  long survivorUsedSize;
+
+  @Unsigned
+  @Label("Number of Regions")
+  int numberOfRegions;
+}
+
+@Name("jdk.G1MMU")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("G1 MMU Information")
+class G1MMU extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Timespan("MILLISECONDS")
+  @Label("Time Slice")
+  @Description("Time slice used to calculate MMU")
+  long timeSlice;
+
+  @Timespan("MILLISECONDS")
+  @Label("GC Time")
+  @Description("Time stopped because of GC during last time slice")
+  long gcTime;
+
+  @Timespan("MILLISECONDS")
+  @Label("Pause Target")
+  @Description("Max time allowed to be spent on GC during last time slice")
+  long pauseTarget;
+}
+
+@Name("jdk.GCConfiguration")
+@Category({"Java Virtual Machine", "GC", "Configuration"})
+@Label("GC Configuration")
+@Description("The configuration of the garbage collector")
+class GCConfiguration extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Young Garbage Collector")
+  @Description("The garbage collector used for the young generation")
+  String youngCollector;
+
+  @Label("Old Garbage Collector")
+  @Description("The garbage collector used for the old generation")
+  String oldCollector;
+
+  @Unsigned
+  @Label("Parallel GC Threads")
+  @Description("Number of parallel threads to use for garbage collection")
+  int parallelGCThreads;
+
+  @Unsigned
+  @Label("Concurrent GC Threads")
+  @Description("Number of concurrent threads to use for garbage collection")
+  int concurrentGCThreads;
+
+  @Label("Uses Dynamic GC Threads")
+  @Description("Whether a dynamic number of GC threads are used or not")
+  boolean usesDynamicGCThreads;
+
+  @Label("Concurrent Explicit GC")
+  @Description("Whether System.gc() is concurrent or not")
+  boolean isExplicitGCConcurrent;
+
+  @Label("Disabled Explicit GC")
+  @Description("Whether System.gc() will cause a garbage collection or not")
+  boolean isExplicitGCDisabled;
+
+  @Timespan("MILLISECONDS")
+  @Label("Pause Target")
+  @Description("Target for GC pauses")
+  long pauseTarget;
+
+  @Unsigned
+  @Label("GC Time Ratio")
+  @Description("Target for runtime vs garbage collection time")
+  int gcTimeRatio;
+}
+
+@Name("jdk.GCHeapConfiguration")
+@Category({"Java Virtual Machine", "GC", "Configuration"})
+@Label("GC Heap Configuration")
+@Description("The configuration of the garbage collected heap")
+class GCHeapConfiguration extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Minimum Heap Size")
+  long minSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Maximum Heap Size")
+  long maxSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Initial Heap Size")
+  long initialSize;
+
+  @Label("If Compressed Oops Are Used")
+  @Description("If compressed Oops (Ordinary Object Pointers) are enabled")
+  boolean usesCompressedOops;
+
+  @Label("Compressed Oops Mode")
+  @Description("The kind of compressed oops being used")
+  String compressedOopsMode;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Object Alignment")
+  @Description("Object alignment (in bytes) on the heap")
+  long objectAlignment;
+
+  @Unsigned
+  @Label("Heap Address Size")
+  @Description("Heap Address Size (in bits)")
+  byte heapAddressBits;
+}
+
+@Name("jdk.GCHeapSummary")
+@Category({"Java Virtual Machine", "GC", "Heap"})
+@Label("Heap Summary")
+class GCHeapSummary extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("When")
+  String when;
+
+  @Label("Heap Space")
+  VirtualSpace heapSpace;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Heap Used")
+  @Description("Bytes allocated by objects in the heap")
+  long heapUsed;
+}
+
+@Name("jdk.GCPhaseConcurrent")
+@Category({"Java Virtual Machine", "GC", "Phases"})
+@Label("GC Phase Concurrent")
+class GCPhaseConcurrent extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.GCPhaseParallel")
+@Category({"Java Virtual Machine", "GC", "Phases"})
+@Label("GC Phase Parallel")
+@Description("GC phases for parallel workers")
+class GCPhaseParallel extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Unsigned
+  @Label("GC Worker Identifier")
+  int gcWorkerId;
+
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.GCPhasePause")
+@Category({"Java Virtual Machine", "GC", "Phases"})
+@Label("GC Phase Pause")
+class GCPhasePause extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.GCPhasePauseLevel1")
+@Category({"Java Virtual Machine", "GC", "Phases"})
+@Label("GC Phase Pause Level 1")
+class GCPhasePauseLevel1 extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.GCPhasePauseLevel2")
+@Category({"Java Virtual Machine", "GC", "Phases"})
+@Label("GC Phase Pause Level 2")
+class GCPhasePauseLevel2 extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.GCPhasePauseLevel3")
+@Category({"Java Virtual Machine", "GC", "Phases"})
+@Label("GC Phase Pause Level 3")
+class GCPhasePauseLevel3 extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.GCPhasePauseLevel4")
+@Category({"Java Virtual Machine", "GC", "Phases"})
+@Label("GC Phase Pause Level 4")
+class GCPhasePauseLevel4 extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Name")
+  String name;
+}
+
+@Name("jdk.GCReferenceStatistics")
+@Category({"Java Virtual Machine", "GC", "Reference"})
+@Label("GC Reference Statistics")
+@Description("Total count of processed references during GC")
+class GCReferenceStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Type")
+  String type;
+
+  @Unsigned
+  @Label("Total Count")
+  long count;
+}
+
+@Name("jdk.GCSurvivorConfiguration")
+@Category({"Java Virtual Machine", "GC", "Configuration"})
+@Label("GC Survivor Configuration")
+@Description("The configuration of the survivors of garbage collection")
+class GCSurvivorConfiguration extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @Label("Maximum Tenuring Threshold")
+  @Description("Upper limit for the age of how old objects to keep in the survivor area")
+  byte maxTenuringThreshold;
+
+  @Unsigned
+  @Label("Initial Tenuring Threshold")
+  @Description("Initial age limit for how old objects to keep in survivor area")
+  byte initialTenuringThreshold;
+}
+
+@Name("jdk.GCTLABConfiguration")
+@Category({"Java Virtual Machine", "GC", "Configuration"})
+@Label("TLAB Configuration")
+@Description("The configuration of the Thread Local Allocation Buffers (TLABs)")
+class GCTLABConfiguration extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("TLABs Used")
+  @Description("If Thread Local Allocation Buffers (TLABs) are in use")
+  boolean usesTLABs;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Minimum TLAB Size")
+  long minTLABSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("TLAB Refill Waste Limit")
+  long tlabRefillWasteLimit;
+}
+
+@Name("jdk.GarbageCollection")
+@Category({"Java Virtual Machine", "GC", "Collector"})
+@Label("Garbage Collection")
+@Description("Garbage collection performed by the JVM")
+class GarbageCollection extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Name")
+  @Description("The name of the Garbage Collector")
+  String name;
+
+  @Label("Cause")
+  @Description("The reason for triggering this Garbage Collection")
+  String cause;
+
+  @Timespan("TICKS")
+  @Label("Sum of Pauses")
+  @Description("Sum of all the times in which Java execution was paused during the garbage collection")
+  long sumOfPauses;
+
+  @Timespan("TICKS")
+  @Label("Longest Pause")
+  @Description("Longest individual pause during the garbage collection")
+  long longestPause;
+}
+
+@Name("jdk.InitialEnvironmentVariable")
+@Category("Operating System")
+@Label("Initial Environment Variable")
+class InitialEnvironmentVariable extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Key")
+  String key;
+
+  @Label("Value")
+  String value;
+}
+
+@Name("jdk.InitialSystemProperty")
+@Category("Java Virtual Machine")
+@Label("Initial System Property")
+@Description("System Property at JVM start")
+class InitialSystemProperty extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Key")
+  String key;
+
+  @Label("Value")
+  String value;
+}
+
+@Name("jdk.IntFlag")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Int Flag")
+class IntFlag extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Value")
+  int value;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.IntFlagChanged")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Int Flag Changed")
+class IntFlagChanged extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Old Value")
+  int oldValue;
+
+  @Label("New Value")
+  int newValue;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.JVMInformation")
+@Category("Java Virtual Machine")
+@Label("JVM Information")
+@Description("Description of JVM and the Java application")
+class JVMInformation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("JVM Name")
+  String jvmName;
+
+  @Label("JVM Version")
+  String jvmVersion;
+
+  @Label("JVM Command Line Arguments")
+  String jvmArguments;
+
+  @Label("JVM Settings File Arguments")
+  String jvmFlags;
+
+  @Label("Java Application Arguments")
+  String javaArguments;
+
+  @Timestamp("MILLISECONDS_SINCE_EPOCH")
+  @Label("JVM Start Time")
+  long jvmStartTime;
+
+  @Label("Process Identifier")
+  long pid;
+}
+
+@Name("jdk.JavaErrorThrow")
+@Name("jdk.JavaErrorThrow")
+@Label("Java Error")
+@Category("Java Application")
+@Description("An object derived from java.lang.Error has been created. OutOfMemoryErrors are ignored")
+class JavaErrorThrow extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Message")
+  String message;
+
+  @Label("Class")
+  Class thrownClass;
+}
+
+@Name("jdk.JavaExceptionThrow")
+@Name("jdk.JavaExceptionThrow")
+@Label("Java Exception")
+@Category("Java Application")
+@Description("An object derived from java.lang.Exception has been created")
+class JavaExceptionThrow extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Message")
+  String message;
+
+  @Label("Class")
+  Class thrownClass;
+}
+
+@Name("jdk.JavaMonitorEnter")
+@Category("Java Application")
+@Label("Java Monitor Blocked")
+class JavaMonitorEnter extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Monitor Class")
+  Class monitorClass;
+
+  @Label("Previous Monitor Owner")
+  Thread previousOwner;
+
+  @Unsigned
+  @MemoryAddress
+  @JavaMonitorAddress
+  @Label("Monitor Address")
+  long address;
+}
+
+@Name("jdk.JavaMonitorInflate")
+@Category("Java Application")
+@Label("Java Monitor Inflated")
+class JavaMonitorInflate extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Monitor Class")
+  Class monitorClass;
+
+  @Unsigned
+  @MemoryAddress
+  @JavaMonitorAddress
+  @Label("Monitor Address")
+  long address;
+
+  @Label("Monitor Inflation Cause")
+  @Description("Cause of inflation")
+  String cause;
+}
+
+@Name("jdk.JavaMonitorWait")
+@Category("Java Application")
+@Label("Java Monitor Wait")
+@Description("Waiting on a Java monitor")
+class JavaMonitorWait extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Monitor Class")
+  @Description("Class of object waited on")
+  Class monitorClass;
+
+  @Label("Notifier Thread")
+  @Description("Notifying Thread")
+  Thread notifier;
+
+  @Timespan("MILLISECONDS")
+  @Label("Timeout")
+  @Description("Maximum wait time")
+  long timeout;
+
+  @Label("Timed Out")
+  @Description("Wait has been timed out")
+  boolean timedOut;
+
+  @Unsigned
+  @MemoryAddress
+  @JavaMonitorAddress
+  @Label("Monitor Address")
+  @Description("Address of object waited on")
+  long address;
+}
+
+@Name("jdk.JavaThreadStatistics")
+@Category({"Java Application", "Statistics"})
+@Label("Java Thread Statistics")
+class JavaThreadStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Active Threads")
+  @Description("Number of live active threads including both daemon and non-daemon threads")
+  long activeCount;
+
+  @Label("Daemon Threads")
+  @Description("Number of live daemon threads")
+  long daemonCount;
+
+  @Label("Accumulated Threads")
+  @Description("Number of threads created and also started since JVM start")
+  long accumulatedCount;
+
+  @Label("Peak Threads")
+  @Description("Peak live thread count since JVM start or when peak count was reset")
+  long peakCount;
+}
+
+@Name("jdk.LongFlag")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Long Flag")
+class LongFlag extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Value")
+  long value;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.LongFlagChanged")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Long Flag Changed")
+class LongFlagChanged extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Old Value")
+  long oldValue;
+
+  @Label("New Value")
+  long newValue;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.MetaspaceAllocationFailure")
+@Category({"Java Virtual Machine", "GC", "Metaspace"})
+@Label("Metaspace Allocation Failure")
+class MetaspaceAllocationFailure extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Class Loader")
+  ClassLoader classLoader;
+
+  @Label("Unsafe Anonymous Class Loader")
+  boolean unsafeAnonymousClassLoader;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Size")
+  long size;
+
+  @Label("Metadata Type")
+  String metadataType;
+
+  @Label("Metaspace Object Type")
+  String metaspaceObjectType;
+}
+
+@Name("jdk.MetaspaceChunkFreeListSummary")
+@Category({"Java Virtual Machine", "GC", "Metaspace"})
+@Label("Metaspace Chunk Free List Summary")
+class MetaspaceChunkFreeListSummary extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("When")
+  String when;
+
+  @Label("Metadata Type")
+  String metadataType;
+
+  @Unsigned
+  @Label("Specialized Chunks")
+  long specializedChunks;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Specialized Chunks Total Size")
+  long specializedChunksTotalSize;
+
+  @Unsigned
+  @Label("Small Chunks")
+  long smallChunks;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Small Chunks Total Size")
+  long smallChunksTotalSize;
+
+  @Unsigned
+  @Label("Medium Chunks")
+  long mediumChunks;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Medium Chunks Total Size")
+  long mediumChunksTotalSize;
+
+  @Unsigned
+  @Label("Humongous Chunks")
+  long humongousChunks;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Humongous Chunks Total Size")
+  long humongousChunksTotalSize;
+}
+
+@Name("jdk.MetaspaceGCThreshold")
+@Category({"Java Virtual Machine", "GC", "Metaspace"})
+@Label("Metaspace GC Threshold")
+class MetaspaceGCThreshold extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Old Value")
+  long oldValue;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("New Value")
+  long newValue;
+
+  @Label("Updater")
+  String updater;
+}
+
+@Name("jdk.MetaspaceOOM")
+@Category({"Java Virtual Machine", "GC", "Metaspace"})
+@Label("Metaspace Out of Memory")
+class MetaspaceOOM extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Class Loader")
+  ClassLoader classLoader;
+
+  @Label("Unsafe Anonymous Class Loader")
+  boolean unsafeAnonymousClassLoader;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Size")
+  long size;
+
+  @Label("Metadata Type")
+  String metadataType;
+
+  @Label("Metaspace Object Type")
+  String metaspaceObjectType;
+}
+
+@Name("jdk.MetaspaceSummary")
+@Category({"Java Virtual Machine", "GC", "Heap"})
+@Label("Metaspace Summary")
+class MetaspaceSummary extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("When")
+  String when;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("GC Threshold")
+  long gcThreshold;
+
+  @Label("Total")
+  MetaspaceSizes metaspace;
+
+  @Label("Data")
+  MetaspaceSizes dataSpace;
+
+  @Label("Class")
+  MetaspaceSizes classSpace;
+}
+
+@Name("jdk.ModuleExport")
+@Category({"Java Virtual Machine", "Runtime", "Modules"})
+@Label("Module Export")
+class ModuleExport extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Exported Package")
+  Package exportedPackage;
+
+  @Label("Target Module")
+  @Description("Module to which the package is qualifiedly exported. If null or N/A, the package is unqualifiedly exported")
+  Module targetModule;
+}
+
+@Name("jdk.ModuleRequire")
+@Category({"Java Virtual Machine", "Runtime", "Modules"})
+@Label("Module Require")
+@Description("A directed edge representing a dependency")
+class ModuleRequire extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Source Module")
+  Module source;
+
+  @Label("Required Module")
+  Module requiredModule;
+}
+
+@Name("jdk.NativeLibrary")
+@Category({"Java Virtual Machine", "Runtime"})
+@Label("Native Library")
+class NativeLibrary extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Base Address")
+  @Description("Starting address of the module")
+  long baseAddress;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Top Address")
+  @Description("Ending address of the module")
+  long topAddress;
+}
+
+@Name("jdk.NativeMethodSample")
+@Category({"Java Virtual Machine", "Profiling"})
+@Label("Method Profiling Sample Native")
+@Description("Snapshot of a threads state when in native")
+class NativeMethodSample extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Thread")
+  Thread sampledThread;
+
+  @Label("Stack Trace")
+  StackTrace stackTrace;
+
+  @Label("Thread State")
+  String state;
+}
+
+@Name("jdk.NetworkUtilization")
+@Category({"Operating System", "Network"})
+@Label("Network Utilization")
+class NetworkUtilization extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Network Interface")
+  @Description("Network Interface Name")
+  String networkInterface;
+
+  @DataAmount("BITS")
+  @Frequency
+  @Label("Read Rate")
+  @Description("Number of incoming bits per second")
+  long readRate;
+
+  @DataAmount("BITS")
+  @Frequency
+  @Label("Write Rate")
+  @Description("Number of outgoing bits per second")
+  long writeRate;
+}
+
+@Name("jdk.OSInformation")
+@Category("Operating System")
+@Label("OS Information")
+class OSInformation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("OS Version")
+  String osVersion;
+}
+
+@Name("jdk.ObjectAllocationInNewTLAB")
+@Category("Java Application")
+@Label("Allocation in new TLAB")
+@Description("Allocation in new Thread Local Allocation Buffer")
+class ObjectAllocationInNewTLAB extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Object Class")
+  @Description("Class of allocated object")
+  Class objectClass;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Allocation Size")
+  long allocationSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("TLAB Size")
+  long tlabSize;
+}
+
+@Name("jdk.ObjectAllocationOutsideTLAB")
+@Category("Java Application")
+@Label("Allocation outside TLAB")
+@Description("Allocation outside Thread Local Allocation Buffers")
+class ObjectAllocationOutsideTLAB extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Object Class")
+  @Description("Class of allocated object")
+  Class objectClass;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Allocation Size")
+  long allocationSize;
+}
+
+@Name("jdk.ObjectCount")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Object Count")
+class ObjectCount extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Object Class")
+  Class objectClass;
+
+  @Label("Count")
+  long count;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Total Size")
+  long totalSize;
+}
+
+@Name("jdk.ObjectCountAfterGC")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Object Count after GC")
+class ObjectCountAfterGC extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Object Class")
+  Class objectClass;
+
+  @Label("Count")
+  long count;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Total Size")
+  long totalSize;
+}
+
+@Name("jdk.OldGarbageCollection")
+@Category({"Java Virtual Machine", "GC", "Collector"})
+@Label("Old Garbage Collection")
+@Description("Extra information specific to Old Garbage Collections")
+class OldGarbageCollection extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+}
+
+@Name("jdk.OldObjectSample")
+@Category({"Java Virtual Machine", "Profiling"})
+@Label("Old Object Sample")
+@Description("A potential memory leak")
+class OldObjectSample extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Timestamp("TICKS")
+  @Label("Allocation Time")
+  long allocationTime;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Last Known Heap Usage")
+  long lastKnownHeapUsage;
+
+  @Label("Object")
+  OldObject object;
+
+  @Label("Array Elements")
+  @Description("If the object is an array, the number of elements, or -1 if it is not an array")
+  int arrayElements;
+
+  @Label("GC Root")
+  OldObjectGcRoot root;
+}
+
+@Name("jdk.PSHeapSummary")
+@Category({"Java Virtual Machine", "GC", "Heap"})
+@Label("Parallel Scavenge Heap Summary")
+class PSHeapSummary extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("When")
+  String when;
+
+  @Label("Old Space")
+  VirtualSpace oldSpace;
+
+  @Label("Old Object Space")
+  ObjectSpace oldObjectSpace;
+
+  @Label("Young Space")
+  VirtualSpace youngSpace;
+
+  @Label("Eden Space")
+  ObjectSpace edenSpace;
+
+  @Label("From Space")
+  ObjectSpace fromSpace;
+
+  @Label("To Space")
+  ObjectSpace toSpace;
+}
+
+@Name("jdk.ParallelOldGarbageCollection")
+@Category({"Java Virtual Machine", "GC", "Collector"})
+@Label("Parallel Old Garbage Collection")
+@Description("Extra information specific to Parallel Old Garbage Collections")
+class ParallelOldGarbageCollection extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Unsigned
+  @MemoryAddress
+  @Label("Dense Prefix")
+  @Description("The address of the dense prefix, used when compacting")
+  long densePrefix;
+}
+
+@Name("jdk.PhysicalMemory")
+@Category({"Operating System", "Memory"})
+@Label("Physical Memory")
+@Description("OS Physical Memory")
+class PhysicalMemory extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Total Size")
+  @Description("Total amount of physical memory available to OS")
+  long totalSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Used Size")
+  @Description("Total amount of physical memory in use")
+  long usedSize;
+}
+
+@Name("jdk.PromoteObjectInNewPLAB")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Promotion in new PLAB")
+@Description("Object survived scavenge and was copied to a new Promotion Local Allocation Buffer (PLAB). Supported GCs are Parallel Scavange, G1 and CMS with Parallel New. Due to promotion being done in parallel an object might be reported multiple times as the GC threads race to copy all objects.")
+class PromoteObjectInNewPLAB extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  @Description("Identifier signifying GC during which the object was promoted")
+  int gcId;
+
+  @Label("Object Class")
+  @Description("Class of promoted object")
+  Class objectClass;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Object Size")
+  @Description("Size of promoted object")
+  long objectSize;
+
+  @Unsigned
+  @Label("Object Tenuring Age")
+  @Description("Tenuring age of a surviving object before being copied. The tenuring age of an object is a value between 0-15 and is incremented each scavange the object survives. Newly allocated objects have tenuring age 0.")
+  int tenuringAge;
+
+  @Label("Tenured")
+  @Description("True if object was promoted to Old space, otherwise the object was aged and copied to a Survivor space")
+  boolean tenured;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("PLAB Size")
+  @Description("Size of the allocated PLAB to which the object was copied")
+  long plabSize;
+}
+
+@Name("jdk.PromoteObjectOutsidePLAB")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Promotion outside PLAB")
+@Description("Object survived scavenge and was copied directly to the heap. Supported GCs are Parallel Scavange, G1 and CMS with Parallel New. Due to promotion being done in parallel an object might be reported multiple times as the GC threads race to copy all objects.")
+class PromoteObjectOutsidePLAB extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  @Description("Identifier signifying GC during which the object was promoted")
+  int gcId;
+
+  @Label("Object Class")
+  @Description("Class of promoted object")
+  Class objectClass;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Object Size")
+  @Description("Size of promoted object")
+  long objectSize;
+
+  @Unsigned
+  @Label("Object Tenuring Age")
+  @Description("Tenuring age of a surviving object before being copied. The tenuring age of an object is a value between 0-15 and is incremented each scavange the object survives. Newly allocated objects have tenuring age 0.")
+  int tenuringAge;
+
+  @Label("Tenured")
+  @Description("True if object was promoted to Old space, otherwise the object was aged and copied to a Survivor space")
+  boolean tenured;
+}
+
+@Name("jdk.PromotionFailed")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Promotion Failed")
+@Description("Promotion of an object failed")
+class PromotionFailed extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Promotion Failed Data")
+  CopyFailed promotionFailed;
+
+  @Label("Running thread")
+  Thread thread;
+}
+
+@Name("jdk.ReservedStackActivation")
+@Category({"Java Virtual Machine", "Runtime"})
+@Label("Reserved Stack Activation")
+@Description("Activation of Reserved Stack Area caused by stack overflow with ReservedStackAccess annotated method in call stack")
+class ReservedStackActivation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Java Method")
+  Method method;
+}
+
+@Name("jdk.SafepointBegin")
+@Category({"Java Virtual Machine", "Runtime", "Safepoint"})
+@Label("Safepoint Begin")
+@Description("Safepointing begin")
+class SafepointBegin extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @SafepointId
+  @Label("Safepoint Identifier")
+  long safepointId;
+
+  @Label("Total Threads")
+  @Description("The total number of threads at the start of safe point")
+  int totalThreadCount;
+
+  @Label("JNI Critical Threads")
+  @Description("The number of threads in JNI critical sections")
+  int jniCriticalThreadCount;
+}
+
+@Name("jdk.SafepointCleanup")
+@Category({"Java Virtual Machine", "Runtime", "Safepoint"})
+@Label("Safepoint Cleanup")
+@Description("Safepointing begin running cleanup tasks")
+class SafepointCleanup extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @SafepointId
+  @Label("Safepoint Identifier")
+  long safepointId;
+}
+
+@Name("jdk.SafepointCleanupTask")
+@Category({"Java Virtual Machine", "Runtime", "Safepoint"})
+@Label("Safepoint Cleanup Task")
+@Description("Safepointing begin running cleanup tasks")
+class SafepointCleanupTask extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @SafepointId
+  @Label("Safepoint Identifier")
+  long safepointId;
+
+  @Label("Task Name")
+  @Description("The task name")
+  String name;
+}
+
+@Name("jdk.SafepointEnd")
+@Category({"Java Virtual Machine", "Runtime", "Safepoint"})
+@Label("Safepoint End")
+@Description("Safepointing end")
+class SafepointEnd extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @SafepointId
+  @Label("Safepoint Identifier")
+  long safepointId;
+}
+
+@Name("jdk.SafepointStateSynchronization")
+@Category({"Java Virtual Machine", "Runtime", "Safepoint"})
+@Label("Safepoint State Synchronization")
+@Description("Synchronize run state of threads")
+class SafepointStateSynchronization extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @SafepointId
+  @Label("Safepoint Identifier")
+  long safepointId;
+
+  @Label("Initial Threads")
+  @Description("The number of threads running at the beginning of state check")
+  int initialThreadCount;
+
+  @Label("Running Threads")
+  @Description("The number of threads still running")
+  int runningThreadCount;
+
+  @Label("Iterations")
+  @Description("Number of state check iterations")
+  int iterations;
+}
+
+@Name("jdk.SafepointWaitBlocked")
+@Category({"Java Virtual Machine", "Runtime", "Safepoint"})
+@Label("Safepoint Wait Blocked")
+@Description("Safepointing begin waiting on running threads to block")
+class SafepointWaitBlocked extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @SafepointId
+  @Label("Safepoint Identifier")
+  long safepointId;
+
+  @Label("Running Threads")
+  @Description("The number running of threads wait for safe point")
+  int runningThreadCount;
+}
+
+@Name("jdk.SecurityPropertyModification")
+@Category({"Java Development Kit", "Security"})
+@Label("Security Property Modification")
+@Name("jdk.SecurityPropertyModification")
+@Description("Modification of Security property")
+class SecurityPropertyModification extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Key")
+  String key;
+
+  @Label("Value")
+  String value;
+}
+
+@Name("jdk.Shutdown")
+@Category({"Java Virtual Machine", "Runtime"})
+@Label("JVM Shutdown")
+@Description("JVM shutting down")
+class Shutdown extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Reason")
+  @Description("Reason for JVM shutdown")
+  String reason;
+}
+
+@Name("jdk.SocketRead")
+@Name("jdk.SocketRead")
+@Label("Socket Read")
+@Category("Java Application")
+@Description("Reading data from a socket")
+class SocketRead extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Remote Host")
+  String host;
+
+  @Label("Remote Address")
+  String address;
+
+  @Label("Remote Port")
+  int port;
+
+  @Label("Timeout Value")
+  @Timespan("MILLISECONDS")
+  long timeout;
+
+  @Label("Bytes Read")
+  @Description("Number of bytes read from the socket")
+  @DataAmount("BYTES")
+  long bytesRead;
+
+  @Label("End of Stream")
+  @Description("If end of stream was reached")
+  boolean endOfStream;
+}
+
+@Name("jdk.SocketWrite")
+@Name("jdk.SocketWrite")
+@Label("Socket Write")
+@Category("Java Application")
+@Description("Writing data to a socket")
+class SocketWrite extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Remote Host")
+  String host;
+
+  @Label("Remote Address")
+  String address;
+
+  @Label("Remote Port")
+  int port;
+
+  @Label("Bytes Written")
+  @Description("Number of bytes written to the socket")
+  @DataAmount("BYTES")
+  long bytesWritten;
+}
+
+@Name("jdk.StringFlag")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("String Flag")
+class StringFlag extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Value")
+  String value;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.StringFlagChanged")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("String Flag Changed")
+class StringFlagChanged extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Label("Old Value")
+  String oldValue;
+
+  @Label("New Value")
+  String newValue;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.SweepCodeCache")
+@Category({"Java Virtual Machine", "Code Sweeper"})
+@Label("Sweep Code Cache")
+class SweepCodeCache extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @SweepId
+  @Label("Sweep Identifier")
+  int sweepId;
+
+  @Unsigned
+  @Label("Methods Swept")
+  int sweptCount;
+
+  @Unsigned
+  @Label("Methods Flushed")
+  int flushedCount;
+
+  @Unsigned
+  @Label("Methods Zombified")
+  int zombifiedCount;
+}
+
+@Name("jdk.SystemProcess")
+@Category("Operating System")
+@Label("System Process")
+class SystemProcess extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Process Identifier")
+  String pid;
+
+  @Label("Command Line")
+  String commandLine;
+}
+
+@Name("jdk.TLSHandshake")
+@Category({"Java Development Kit", "Security"})
+@Label("TLS Handshake")
+@Name("jdk.TLSHandshake")
+@Description("Parameters used in TLS Handshake")
+class TLSHandshake extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Peer Host")
+  String peerHost;
+
+  @Label("Peer Port")
+  int peerPort;
+
+  @Label("Protocol Version")
+  String protocolVersion;
+
+  @Label("Cipher Suite")
+  String cipherSuite;
+
+  @Label("Certificate Id")
+  @Description("Peer Certificate Id")
+  long certificateId;
+}
+
+@Name("jdk.TenuringDistribution")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Tenuring Distribution")
+class TenuringDistribution extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Unsigned
+  @Label("Age")
+  int age;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Size")
+  long size;
+}
+
+@Name("jdk.ThreadAllocationStatistics")
+@Category({"Java Application", "Statistics"})
+@Label("Thread Allocation Statistics")
+class ThreadAllocationStatistics extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Allocated")
+  @Description("Approximate number of bytes allocated since thread start")
+  long allocated;
+
+  @Label("Thread")
+  Thread thread;
+}
+
+@Name("jdk.ThreadCPULoad")
+@Category({"Operating System", "Processor"})
+@Label("Thread CPU Load")
+class ThreadCPULoad extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Percentage
+  @Label("User Mode CPU Load")
+  @Description("User mode thread CPU load")
+  float user;
+
+  @Percentage
+  @Label("System Mode CPU Load")
+  @Description("System mode thread CPU load")
+  float system;
+}
+
+@Name("jdk.ThreadContextSwitchRate")
+@Category({"Operating System", "Processor"})
+@Label("Thread Context Switch Rate")
+class ThreadContextSwitchRate extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Frequency
+  @Label("Switch Rate")
+  @Description("Number of context switches per second")
+  float switchRate;
+}
+
+@Name("jdk.ThreadDump")
+@Category({"Java Virtual Machine", "Runtime"})
+@Label("Thread Dump")
+class ThreadDump extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Thread Dump")
+  String result;
+}
+
+@Name("jdk.ThreadEnd")
+@Category("Java Application")
+@Label("Java Thread End")
+class ThreadEnd extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Java Thread")
+  Thread thread;
+}
+
+@Name("jdk.ThreadPark")
+@Category("Java Application")
+@Label("Java Thread Park")
+class ThreadPark extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Class Parked On")
+  Class parkedClass;
+
+  @Timespan("NANOSECONDS")
+  @Label("Park Timeout")
+  long timeout;
+
+  @Timestamp("MILLISECONDS_SINCE_EPOCH")
+  @Label("Park Until")
+  long until;
+
+  @Unsigned
+  @MemoryAddress
+  @JavaMonitorAddress
+  @Label("Address of Object Parked")
+  long address;
+}
+
+@Name("jdk.ThreadSleep")
+@Category("Java Application")
+@Label("Java Thread Sleep")
+class ThreadSleep extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Timespan("MILLISECONDS")
+  @Label("Sleep Time")
+  long time;
+}
+
+@Name("jdk.ThreadStart")
+@Category("Java Application")
+@Label("Java Thread Start")
+class ThreadStart extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Java Thread")
+  Thread thread;
+}
+
+@Name("jdk.UnsignedIntFlag")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Unsigned Int Flag")
+class UnsignedIntFlag extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Unsigned
+  @Label("Value")
+  int value;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.UnsignedIntFlagChanged")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Unsigned Int Flag Changed")
+class UnsignedIntFlagChanged extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Unsigned
+  @Label("Old Value")
+  int oldValue;
+
+  @Unsigned
+  @Label("New Value")
+  int newValue;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.UnsignedLongFlag")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Unsigned Long Flag")
+class UnsignedLongFlag extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Unsigned
+  @Label("Value")
+  long value;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.UnsignedLongFlagChanged")
+@Category({"Java Virtual Machine", "Flag"})
+@Label("Unsigned Long Flag Changed")
+class UnsignedLongFlagChanged extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Name")
+  String name;
+
+  @Unsigned
+  @Label("Old Value")
+  long oldValue;
+
+  @Unsigned
+  @Label("New Value")
+  long newValue;
+
+  @Label("Origin")
+  String origin;
+}
+
+@Name("jdk.X509Certificate")
+@Category({"Java Development Kit", "Security"})
+@Label("X509 Certificate")
+@Name("jdk.X509Certificate")
+@Description("Details of X.509 Certificate parsed by JDK")
+class X509Certificate extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Signature Algorithm")
+  String algorithm;
+
+  @Label("Serial Number")
+  String serialNumber;
+
+  @Label("Subject")
+  String subject;
+
+  @Label("Issuer")
+  String issuer;
+
+  @Label("Key Type")
+  String keyType;
+
+  @Label("Key Length")
+  int keyLength;
+
+  @Label("Certificate Id")
+  long certificateId;
+
+  @Label("Valid From")
+  @Timestamp("MILLISECONDS_SINCE_EPOCH")
+  long validFrom;
+
+  @Label("Valid Until")
+  @Timestamp("MILLISECONDS_SINCE_EPOCH")
+  long validUntil;
+}
+
+@Name("jdk.X509Validation")
+@Category({"Java Development Kit", "Security"})
+@Label("X509 Validation")
+@Name("jdk.X509Validation")
+@Description("Serial numbers from X.509 Certificates forming chain of trust")
+class X509Validation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Stack Trace")
+  @Description("Stack Trace starting from the method the event was committed in")
+  StackTrace stackTrace;
+
+  @Label("Certificate Id")
+  long certificateId;
+
+  @Label("Certificate Position")
+  @Description("Certificate position in chain of trust, 1 = trust anchor")
+  int certificatePosition;
+
+  @Label("Validation Counter")
+  long validationCounter;
+}
+
+@Name("jdk.YoungGarbageCollection")
+@Category({"Java Virtual Machine", "GC", "Collector"})
+@Label("Young Garbage Collection")
+@Description("Extra information specific to Young Garbage Collections")
+class YoungGarbageCollection extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Unsigned
+  @Label("Tenuring Threshold")
+  int tenuringThreshold;
+}
+
+@Name("jdk.YoungGenerationConfiguration")
+@Category({"Java Virtual Machine", "GC", "Configuration"})
+@Label("Young Generation Configuration")
+@Description("The configuration of the young generation of the garbage collected heap")
+class YoungGenerationConfiguration extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Minimum Young Generation Size")
+  long minSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Maximum Young Generation Size")
+  long maxSize;
+
+  @Unsigned
+  @Label("New Ratio")
+  @Description("The size of the young generation relative to the tenured generation")
+  int newRatio;
+}
+
+@Name("jdk.ZPageAllocation")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("ZPage Allocation")
+@Description("Allocation of a ZPage")
+@Experimental
+class ZPageAllocation extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Page Size")
+  long pageSize;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Used After")
+  long usedAfter;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("Free After")
+  long freeAfter;
+
+  @Unsigned
+  @DataAmount("BYTES")
+  @Label("In Cache After")
+  long inCacheAfter;
+
+  @Label("Non-blocking")
+  boolean nonBlocking;
+
+  @Label("No Reserve")
+  boolean noReserve;
+}
+
+@Name("jdk.ZStatisticsCounter")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Z Statistics Counter")
+@Experimental
+class ZStatisticsCounter extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Id")
+  String id;
+
+  @Unsigned
+  @Label("Increment")
+  long increment;
+
+  @Unsigned
+  @Label("Value")
+  long value;
+}
+
+@Name("jdk.ZStatisticsSampler")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("Z Statistics Sampler")
+@Experimental
+class ZStatisticsSampler extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Label("Id")
+  String id;
+
+  @Unsigned
+  @Label("Value")
+  long value;
+}
+
+@Name("jdk.ZThreadPhase")
+@Category({"Java Virtual Machine", "GC", "Detailed"})
+@Label("ZGC Thread Phase")
+@Experimental
+class ZThreadPhase extends jdk.jfr.Event {
+  @Label("Start Time")
+  @Timestamp("TICKS")
+  long startTime;
+
+  @Label("Duration")
+  @Timespan("TICKS")
+  long duration;
+
+  @Label("Event Thread")
+  @Description("Thread in which event was committed in")
+  Thread eventThread;
+
+  @Unsigned
+  @GcId
+  @Label("GC Identifier")
+  int gcId;
+
+  @Label("Name")
+  String name;
+}
+
