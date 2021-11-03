@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: at.bestsolution.jfr.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: at.bestsolution.jfr.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: at.bestsolution.jfr.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: at.bestsolution.jfr,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: at.bestsolution.jfr.ide.contentassist.antlr.internal,
+ at.bestsolution.jfr.ide.contentassist.antlr

@@ -1,0 +1,34 @@
+grammar at.bestsolution.jfr.JFRMeta with org.eclipse.xtext.common.Terminals
+
+generate jFRMeta "http://www.bestsolution.at/jfr/JFRMeta"
+
+Model:
+	classes+=Clazz*;
+
+
+Clazz:
+	annotations+=Annotation*
+	'class' name=ID ( 'extends' super=QualifiedName )? '{'
+		attributes += Attribute*
+	'}'
+;
+
+Attribute:
+	annotations+=Annotation*
+	type=[Clazz|ID] array?='[]'? name=ID ';'
+;
+
+Annotation:
+	'@' type=[Clazz|ID] ('(' (values+=AnnotationValue | ('{' values+=AnnotationValue (',' values += AnnotationValue)* '}')) ')')?
+;
+
+AnnotationValue:
+	valueString=STRING | valueBoolean=Boolean | valueNum=INT
+;
+
+enum Boolean:
+	TRUE="true" | FALSE="false"
+;
+
+QualifiedName:
+  ID ('.' ID)*;

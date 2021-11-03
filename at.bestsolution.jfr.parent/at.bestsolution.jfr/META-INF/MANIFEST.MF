@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: at.bestsolution.jfr
+Bundle-ManifestVersion: 2
+Bundle-Name: at.bestsolution.jfr
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: at.bestsolution.jfr; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: at.bestsolution.jfr.parser.antlr.internal,
+ at.bestsolution.jfr.serializer,
+ at.bestsolution.jfr,
+ at.bestsolution.jfr.jFRMeta,
+ at.bestsolution.jfr.validation,
+ at.bestsolution.jfr.jFRMeta.impl,
+ at.bestsolution.jfr.parser.antlr,
+ at.bestsolution.jfr.scoping,
+ at.bestsolution.jfr.generator,
+ at.bestsolution.jfr.services,
+ at.bestsolution.jfr.jFRMeta.util
+Import-Package: org.apache.log4j
