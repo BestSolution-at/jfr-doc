@@ -45,9 +45,16 @@ class GenUtil {
 		val ownerClass = att.eContainer as Clazz
 		return prevModel.classes.filter[ c | c.name == ownerClass.name ].flatMap[c|c.attributes].findFirst[a|a.name == att.name] === null
 	}
+	
+	def static createVersionList(int max) {
+	    val version = newArrayList
+	    for( var i = 11; i <= max; i++ ) {
+	        version += i+""
+	    }
+	    return version
+	}
 
-	def static createModelMap() {
-		val versions = newArrayList("11","12","13","14","15","16","17")
+	def static createModelMap(List<String> versions) {
 		val injector = new JFRMetaStandaloneSetup().createInjectorAndDoEMFRegistration();
 		val resourceSet = injector.getInstance(XtextResourceSet);
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);

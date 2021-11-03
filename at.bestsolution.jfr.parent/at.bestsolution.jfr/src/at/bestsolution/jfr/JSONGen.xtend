@@ -15,7 +15,7 @@ import at.bestsolution.jfr.jFRMeta.Attribute
 
 class JSONGen {
 	def static void main(String[] args) {
-		val versions = newArrayList("11","12","13","14","15","16","17")
+		val versions = createVersionList(Integer.parseInt(args.get(0)))
 		val injector = new JFRMetaStandaloneSetup().createInjectorAndDoEMFRegistration();
 		val resourceSet = injector.getInstance(XtextResourceSet);
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);

@@ -22,12 +22,12 @@
 	</properties>
 	<modules>
 		<module>at.bestsolution.jfr</module>
-		<module>at.bestsolution.jfr.ide</module>
+		<module>at.bestsolution.jfr.target</module>
+		<!-- module>at.bestsolution.jfr.ide</module>
 		<module>at.bestsolution.jfr.ui</module>
 		<module>at.bestsolution.jfr.web</module>
-		<module>at.bestsolution.jfr.target</module>
 		<module>at.bestsolution.jfr.feature</module>
-		<module>at.bestsolution.jfr.repository</module>
+		<module>at.bestsolution.jfr.repository</module -->
 	</modules>
 	<dependencyManagement>
 		<dependencies>

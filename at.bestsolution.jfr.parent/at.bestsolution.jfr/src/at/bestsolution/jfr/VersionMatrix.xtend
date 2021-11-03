@@ -11,8 +11,7 @@ import java.util.Set
 
 class VersionMatrix {
 	def static void main(String[] args) {
-
-		val models = createModelMap
+		val models = createModelMap(createVersionList(Integer.parseInt(args.get(0))))
 
 		val all = models.values.flatMap[m|m.classes].filter[c|c.super == "jdk.jfr.Event"].map[c|c.eventName].toSet;
 		val classVersion = new HashMap()

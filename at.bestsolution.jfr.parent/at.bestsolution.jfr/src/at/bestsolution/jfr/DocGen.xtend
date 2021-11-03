@@ -12,7 +12,8 @@ import static extension at.bestsolution.jfr.GenUtil.*
 
 class DocGen {
 	def static void main(String[] args) {
-		val models = createModelMap
+		val models = createModelMap(createVersionList(Integer.parseInt(args.get(0))))
+		
 		val versions = new ArrayList(models.keySet)
 
 		models.forEach[version,model,index |
