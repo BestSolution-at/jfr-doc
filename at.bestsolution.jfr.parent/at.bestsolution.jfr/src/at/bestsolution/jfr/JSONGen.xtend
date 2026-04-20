@@ -16,6 +16,7 @@ import at.bestsolution.jfr.jFRMeta.Attribute
 class JSONGen {
 	def static void main(String[] args) {
 		val versions = createVersionList(Integer.parseInt(args.get(0)))
+		val path = args.get(1);
 		val injector = new JFRMetaStandaloneSetup().createInjectorAndDoEMFRegistration();
 		val resourceSet = injector.getInstance(XtextResourceSet);
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
@@ -23,7 +24,7 @@ class JSONGen {
 		val models = new ArrayList
 		for( v : versions ) {
 			val resource = resourceSet.getResource(
-			    URI.createURI("file:/Users/tomschindl/git/jfr-doc/openjdk-"+v+".jfr"), true);
+			    URI.createURI("file:"+path+"/openjdk-"+v+".jfr"), true);
 			val model = resource.getContents().head as Model;
 			models.add(model)
 		}
@@ -32,7 +33,7 @@ class JSONGen {
 			val model = pair.value
 			var version = versions.get(pair.key)
 			val preModel = pair.key == 0 ? null : models.get(pair.key - 1)
-			Files.writeString(Paths.get("/Users/tomschindl/git/jfr-doc/openjdk-"+version+".json"),model.generate(preModel,version), StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)
+			Files.writeString(Paths.get(path+"/openjdk-"+version+".json"),model.generate(preModel,version), StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)
 		}
 	}
 
