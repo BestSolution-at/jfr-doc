@@ -16,6 +16,7 @@ import java.util.Map
 class IndexGen {
 	def static void main(String[] args) {
 		val versions = createVersionList(Integer.parseInt(args.get(0)))
+		val path = args.get(1);
 		val injector = new JFRMetaStandaloneSetup().createInjectorAndDoEMFRegistration();
 		val resourceSet = injector.getInstance(XtextResourceSet);
 		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
@@ -23,12 +24,12 @@ class IndexGen {
 		val models = new HashMap
 		for( v : versions ) {
 			val resource = resourceSet.getResource(
-			    URI.createURI("file:/Users/tomschindl/git/jfr-doc/openjdk-"+v+".jfr"), true);
+			    URI.createURI("file:"+path+"/openjdk-"+v+".jfr"), true);
 			val model = resource.getContents().head as Model;
 			models.put(v,model)
 		}
 
-		Files.writeString(Paths.get("/Users/tomschindl/git/jfr-doc/index.html"),generate(models,versions), StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)
+		Files.writeString(Paths.get(path+"/index.html"),generate(models,versions), StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)
 	}
 
 	def static generate(Map<String,Model> map, List<String> versions) '''

@@ -12,6 +12,7 @@ import java.util.Set
 class VersionMatrix {
 	def static void main(String[] args) {
 		val models = createModelMap(createVersionList(Integer.parseInt(args.get(0))))
+		val path = args.get(1);
 
 		val all = models.values.flatMap[m|m.classes].filter[c|c.super == "jdk.jfr.Event"].map[c|c.eventName].toSet;
 		val classVersion = new HashMap()
@@ -24,7 +25,7 @@ class VersionMatrix {
 			classVersion.put(v,versionData)
 		} ]
 
-		Files.writeString(Paths.get("/Users/tomschindl/git/jfr-doc/openjdk-matrix.html"),generate(classVersion,models.keySet), StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)
+		Files.writeString(Paths.get(path + "/openjdk-matrix.html"),generate(classVersion,models.keySet), StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)
 
 	}
 

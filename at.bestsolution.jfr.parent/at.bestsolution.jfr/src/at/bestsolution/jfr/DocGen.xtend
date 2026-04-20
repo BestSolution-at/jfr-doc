@@ -13,12 +13,13 @@ import static extension at.bestsolution.jfr.GenUtil.*
 class DocGen {
 	def static void main(String[] args) {
 		val models = createModelMap(createVersionList(Integer.parseInt(args.get(0))))
+		val path = args.get(1);
 		
 		val versions = new ArrayList(models.keySet)
 
 		models.forEach[version,model,index |
 			val prevModel = index == 0 ? null : models.get(versions.get(index-1))
-			Files.writeString(Paths.get("/Users/tomschindl/git/jfr-doc/openjdk-"+version+".html"),model.generate(prevModel,version,versions), StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)
+			Files.writeString(Paths.get(path+"/openjdk-"+version+".html"),model.generate(prevModel,version,versions), StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)
 		]
 
 	}
