@@ -43,13 +43,13 @@ class JSONGen {
 			"events": [
 				«val evts = model.classes.filter[c|c.super == "jdk.jfr.Event"]»
 				«FOR e : evts»
-					«e.generateEvent»«IF e !== evts.last»,«ENDIF»
+					«e.generateEvent»«IF e !== evts.lastOrNull»,«ENDIF»
 				«ENDFOR»
 			],
 			"types": [
 				«val types = model.classes.filter[c|c.super === null]»
 				«FOR t : types»
-					«t.generateType»«IF t !== types.last»,«ENDIF»
+					«t.generateType»«IF t !== types.lastOrNull»,«ENDIF»
 				«ENDFOR»
 			]
 		}
@@ -63,12 +63,12 @@ class JSONGen {
 			"categories": [
 				«val cats = clazz.categories»
 				«FOR cat : cats»
-					"«cat»"«IF cat !== cats.last»,«ENDIF»
+					"«cat»"«IF cat !== cats.lastOrNull»,«ENDIF»
 				«ENDFOR»
 			],
 			"attributes": [
 				«FOR a : clazz.attributes»
-					«a.generateAttribute»«IF a !== clazz.attributes.last»,«ENDIF»
+					«a.generateAttribute»«IF a !== clazz.attributes.lastOrNull»,«ENDIF»
 				«ENDFOR»
 			]
 		}
@@ -79,7 +79,7 @@ class JSONGen {
 			"name": "«clazz.name»",
 			"attributes": [
 				«FOR a : clazz.attributes»
-					«a.generateAttribute»«IF a !== clazz.attributes.last»,«ENDIF»
+					«a.generateAttribute»«IF a !== clazz.attributes.lastOrNull»,«ENDIF»
 				«ENDFOR»
 			]
 		}

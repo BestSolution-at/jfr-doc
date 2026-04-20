@@ -4,12 +4,10 @@ import at.bestsolution.jfr.jFRMeta.Clazz
 import at.bestsolution.jfr.jFRMeta.Attribute
 import at.bestsolution.jfr.jFRMeta.Model
 import java.util.List
-import java.util.HashMap
 import org.eclipse.xtext.resource.XtextResourceSet
 import org.eclipse.xtext.resource.XtextResource
 import org.eclipse.emf.common.util.URI
 import java.util.LinkedHashMap
-import java.util.Set
 import java.util.Collection
 
 class GenUtil {

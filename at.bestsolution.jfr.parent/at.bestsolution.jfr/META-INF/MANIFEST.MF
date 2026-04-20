@@ -1,20 +1,17 @@
-Manifest-Version: 1.0
-Automatic-Module-Name: at.bestsolution.jfr
 Bundle-ManifestVersion: 2
-Bundle-Name: at.bestsolution.jfr
+Bundle-Name: org.xtext.example.mydsl
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: at.bestsolution.jfr; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase,
- org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.equinox.common;bundle-version="3.19.0",
  org.eclipse.emf.ecore,
- org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
- org.eclipse.xtext.util,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.41.0",
  org.eclipse.emf.common,
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Export-Package: at.bestsolution.jfr.parser.antlr.internal,
  at.bestsolution.jfr.serializer,
  at.bestsolution.jfr,
